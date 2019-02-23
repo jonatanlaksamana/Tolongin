@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
+    const admin = 'admin';
+    const deafult = 'biasa';
 
     /**
      * The attributes that are mass assignable.
@@ -27,4 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $hidden = [
         'password', 'remember_token',
     ];
+     public function isAdmin(){
+         return $this->member === self::admin;
+     }
 }

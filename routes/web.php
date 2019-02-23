@@ -18,4 +18,5 @@ Auth::routes(['verify' => true]);
 
 Route::get('/' , 'indexcontroller@index')->name('home');
 Route::get('/home' , 'HomeController@index')->name('index');
+Route::get('/admin' , 'AdminController@index')->middleware('is_admin')->name('admin.panel');
 
