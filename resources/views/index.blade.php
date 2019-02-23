@@ -18,7 +18,7 @@
 
             <div class="col-md-11 ftco-animate text-center">
               <h1>Tolongin</h1>
-              <h2><span>Sewa jasa yang mempermudah hidup mu :)</span></h2>
+              <h2><span>Sewa jasa yang mempermudah hidup kkkmu :)</span></h2>
             </div>
             <div class="mouse">
   						<a href="#" class="mouse-icon">
