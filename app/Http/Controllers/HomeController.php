@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-
-use Auth;
 
 class HomeController extends Controller
 {
@@ -26,37 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-       $id =  Auth::id();
-        $user_login = User::find($id);
-        return view('home' , compact(['user_login']));
+
+        return view('home');
     }
 
-    public function update($id){
-        $id = Auth::id();
-         $target =User::find($id);
-         $target->update(
-             [
-                 'profile_lengkap' => request('firstname') ." " . request('lastname'). " ". request('lul')
-             ]
-         );
-    }
-
-
-    public function destroy($id)
-{
-    $id = Auth::id();
-    $target =User::find($id);
-     $target->delete();
-     return redirect()->route('index');
-}
-
-public function erase($id){
-    $id = Auth::id();
-    $delete = User::find($id);
-    $delete->update(
-        [
-            'profile_lengkap' => ''
-        ]
-        );
-}
 }
