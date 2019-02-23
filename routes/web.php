@@ -13,4 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/post/{id}' , 'HomeController@update')->name('update');
+Route::delete('delete/{id}', 'HomeController@destroy')->name('delete');
