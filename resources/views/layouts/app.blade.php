@@ -1,7 +1,7 @@
 
 
 <head>
-  <title>AKU CINTA BOOTSTRAP</title>
+  <title>Tolongin.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,10 +43,10 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="shop.html">BLABLA</a>
-                  <a class="dropdown-item" href="product-single.html">APA LAGI</a>
-                  <a class="dropdown-item" href="cart.html">JUAL JOJO</a>
-                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+                @foreach( $category as $item)
+                  <a class="dropdown-item" href="shop.html">{{$item->cat}}</a>
+                @endforeach
+               
                 </div>
               </li>
               <ul class="navbar-nav ml-auto">
