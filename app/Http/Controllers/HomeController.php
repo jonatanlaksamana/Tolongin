@@ -49,4 +49,14 @@ class HomeController extends Controller
      $target->delete();
      return redirect()->route('index');
 }
+
+public function erase($id){
+    $id = Auth::id();
+    $delete = User::find($id);
+    $delete->update(
+        [
+            'profile_lengkap' => ''
+        ]
+        );
+}
 }

@@ -26,4 +26,9 @@
     <input type=submit value="delete">
 
 </form>
+
+<form method="post" action="{{route('erase', $user_login)}}">
+@csrf
+<input type="submit" value="submit">
+</form>
 @endsection
