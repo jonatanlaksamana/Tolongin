@@ -19,5 +19,8 @@ Auth::routes(['verify' => true]);
 Route::get('/' , 'indexcontroller@index')->name('home');
 Route::get('/home' , 'HomeController@index')->name('index')->middleware('verified');
 Route::get('/admin' , 'AdminController@index')->middleware('is_admin')->name('admin.panel');
-
-
+Route::get('/chart','AdminController@chart')->name('admin.chart');
+Route::get('/table','AdminController@tables')->name('admin.table');
+Route::get('/AdminPanel','AdminController@adminpanel')->name('admin.panel');
+Route::get('/form','AdminController@form')->name('admin.form');
+Route::get('/map','AdminController@map')->name('admin.map');
