@@ -19,9 +19,7 @@ class CreateRequestsTable extends Migration
           $table->string('namaJasa');
           $table->float('harga');
           $table->timestamps();
-          $table->foreign('idClient')
-          ->references('id')->on('users')
-          ->onDelete('cascade');
+          $table->foreign('idClient')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
