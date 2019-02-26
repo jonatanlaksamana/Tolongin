@@ -23,8 +23,10 @@ class CreateUsersTable extends Migration
             $table->string('profile_lengkap');
             $table->string('member');
             $table->integer('reputasi');
+            $table->string('alamat');
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
