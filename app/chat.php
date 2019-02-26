@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RequestOrderModel extends Model
+class chat extends Model
 {
     //
 }
