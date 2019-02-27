@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+    
         ]);
     }
 
@@ -69,8 +70,12 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile_lengkap' => '',
+<<<<<<< HEAD
+            'member' => 'biasa',
+=======
             'member' => User::deafult,
             'image' => 'deafult.jpg',
+>>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
             'reputasi' => 0,
             'alamat' => '',
         ]);
