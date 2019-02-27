@@ -1,10 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+<<<<<<< HEAD
 use App\User;
 use Auth;
 
 use Illuminate\Http\Request;
+=======
+
+use Illuminate\Http\Request;
+use App\category;
+>>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
 
 class HomeController extends Controller
 {
@@ -25,6 +31,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $user_login = User::find(Auth::id());
         return view('home' , compact(['user_login'])); 
     }
@@ -53,4 +60,10 @@ class HomeController extends Controller
         $user_login->delete();
         //return Redirect::route('profile_lengkap');
     }
+=======
+        $category = category::all();
+      return view('home' , compact(['category']));
+    }
+
+>>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
 }
