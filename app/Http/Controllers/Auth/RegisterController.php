@@ -72,6 +72,7 @@ class RegisterController extends Controller
             'member' => User::deafult,
             'image' => 'deafult.jpg',
             'reputasi' => 0,
+            'alamat' => '',
         ]);
     }
 
