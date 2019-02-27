@@ -91,6 +91,8 @@
     @yield('content')
 </main>
 
+{}}
+
 </div>
 
 
