@@ -77,6 +77,7 @@ class RegisterController extends Controller
             'image' => 'deafult.jpg',
 >>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
             'reputasi' => 0,
+            'alamat' => '',
         ]);
     }
 
