@@ -7,7 +7,35 @@
 
 
 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/promo1.png" alt="Los Angeles">
+      </div>
+
+    </div>
+    <!-- <div class="carousel-caption">
+             <h1 class="display-1"><font face="verdana" color="black"> <strong>Tolongin </strong></font></h1>
+             <h3 class="display-4"><font face="verdana" color="black"> <strong>Mempermudah Hidup mu!</strong> </h1>
+           </div> -->
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
       <section class="ftco-section ftco-product">
       	<div class="container">
@@ -256,51 +284,6 @@
       </section>
 
 
-
-      <section class="ftco-section bg-light ftco-services">
-      	<div class="container">
-      		<div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-              <h1 class="big">Cara Kerja Tolongin</h1>
-              <h2>Jadi gini</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services">
-                <div class="icon d-flex justify-content-center align-items-center mb-4">
-              		<span class="flaticon-002-recommended"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="heading">Kepuasan</h3>
-                  <p>Pasti Puas Gan</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services">
-                <div class="icon d-flex justify-content-center align-items-center mb-4">
-              			<span class="flaticon-002-recommended"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="heading">Cepat datang</h3>
-                  <p>Cepat datang gan</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 text-center d-flex align-self-stretch ftco-animate">
-              <div class="media block-6 services">
-                <div class="icon d-flex justify-content-center align-items-center mb-4">
-              			<span class="flaticon-002-recommended"></span>
-                </div>
-                <div class="media-body">
-                  <h3 class="heading">Kualitas DIjamin</h3>
-                  <p>Semu pekerja sudah terverifikasi</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      	</div>
       </section>
 
 
