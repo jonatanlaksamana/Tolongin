@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\category;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -78,7 +79,8 @@ class RegisterController extends Controller
     }
 
     public function showRegistrationForm(){
+        $idUserLogin = Auth::id();
         $category = category::all();
-      return view('auth/register' , compact(['category']));
+      return view('auth/register' , compact('category', 'idUserLogin'));
     }
 }
