@@ -8,21 +8,6 @@
 
 
 
-  		<div class="hero-wrap js-fullheight" style="background-image: url('images/1.jpg');">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
-
-            <div class="col-md-11 ftco-animate text-center">
-              <h1>Tolongin</h1>
-              <h2><span>Sewa jasa yang mempermudah hidup mu :)</span></h2>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
 
       <section class="ftco-section ftco-product">
       	<div class="container">
