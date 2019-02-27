@@ -177,76 +177,24 @@
             	<div class="row ftco-animate">
   		          <div class="col-md-12">
   		            <div class="carousel-testimony owl-carousel ftco-owl">
-  		              <div class="item">
+  		              
+										@foreach($testimonis as $testimoni)
+										<div class="item">
   		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
+  		                  <div class="user-img mb-4" style="background-image: url(/storage/{{$testimoni->image}})">
   		                    <span class="quote d-flex align-items-center justify-content-center">
   		                      <i class="icon-quote-left"></i>
   		                    </span>
   		                  </div>
   		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
+  		                    <p class="mb-4">{{$testimoni->isi}}</p>
+  		                    <p class="name">{{$testimoni->name}}</p>
   		                    <span class="position">Customer</span>
   		                  </div>
   		                </div>
   		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
+										@endforeach
+
   		            </div>
   		          </div>
   		        </div>
