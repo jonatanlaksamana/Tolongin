@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\category;
+use Auth;
+use DB;
 
 class LoginController extends Controller
 {
@@ -41,6 +43,7 @@ class LoginController extends Controller
 
     public function showLoginForm(){
         $category = category::all();
-      return view('auth/login' , compact(['category']));
+        $idUserLogin = Auth::id();
+      return view('auth/login' , compact('category', 'idUserLogin'));
     }
 }
