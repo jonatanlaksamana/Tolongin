@@ -288,7 +288,6 @@
             	<div class="row ftco-animate">
   		          <div class="col-md-12">
   		            <div class="carousel-testimony owl-carousel ftco-owl">
-
 										@foreach($testimonis as $testimoni)
 										<div class="item">
   		                <div class="testimony-wrap py-4 pb-5">

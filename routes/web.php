@@ -26,3 +26,6 @@ Route::get('/AdminPanel','AdminController@adminpanel')->name('admin.panel');
 Route::get('/form','AdminController@form')->name('admin.form');
 Route::get('/map','AdminController@map')->name('admin.map');
 Route::get('/userprofile/{id}','UserController@profile')->name('profile');
+Route::post('/update','UserController@update')->name('update');
+Route::post('/updateFoto','UserController@updateFoto')->name('updateFoto');
+
