@@ -31,8 +31,6 @@ return view('Admin/chart');
 
     }
 
-    public function testimoni(){
-        return view('Admin/testimoni');
-    }
+ 
 
 }
