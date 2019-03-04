@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\User;
 use App\category;
+use Hash;
 use Auth;
+
 class UserController extends Controller
 {
     //
@@ -16,4 +18,26 @@ class UserController extends Controller
         return view('userprofile',compact('category','user' , 'idUserLogin'));
     }
 
+    public function update(){
+     $user = user::find(Auth::id());
+
+     $user->name = request('nama');
+     $user->email = request('email');
+     $user->password = hash::make(request('pass'));
+
+     $user->save();
+      return redirect('/userprofile/' . Auth::id() . "" );
+
+    }
+
+    public function updateFoto(){
+      $user = user::find(Auth::id());
+        $status = Request::hasFile('gantifoto');
+        $image = request('gantifoto');
+        $user->image =  time().".".$image->extension();
+        $dest =  storage_path('/app/public');
+        $image->move($dest,$user->image);
+        $user->save();
+        return redirect('/userprofile/' . Auth::id());
+  }
 }
