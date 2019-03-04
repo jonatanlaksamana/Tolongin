@@ -42,7 +42,7 @@
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="images/icon/3.png" alt="Cool Admin" />
+                <img src="/images/icon/3.png" alt="Cool Admin" />
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -61,7 +61,7 @@
                     </li>
                     <li>
                         <a href="{{route('admin.table')}}">
-                            <i class="fas fa-table"></i>Tables</a>
+                            <i class="fas fa-table"></i>Table</a>
                     </li>
                     <li>
                         <a href="{{route('admin.form')}}">
@@ -70,21 +70,10 @@
 
                     <li>
                         <a href="{{route('admin.map')}}">
-                            <i class="fas fa-map-marker-alt"></i>Maps</a>
+                            <i class="fas fa-map-marker-alt"></i>Maps </a>
                     </li>
                     <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Pages</a> </li>
-                    <li class="has-sub"><a class="js-arrow" href="{{route('testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
-                    <ul class="list-unstyled navbar__sub-list js-sub-list">
-                        <li>
-                            <a href="login.html">Login</a>
-                        </li>
-                        <li>
-                            <a href="register.html">Register</a>
-                        </li>
-                        <li>
-                            <a href="forget-pass.html">Forget Password</a>
-                        </li>
-                    </ul>
+                    <li class="has-sub"><a class="js-arrow" href="{{route('admin.testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
                     </li>
 
                 </ul>
@@ -155,10 +144,10 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/1.jpg" alt="Jaki" />
+                                        <img src="/storage/{{$user->image}}"  />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">JAKI BABIK</a>
+                                        <a class="js-acc-btn" href="#">{{$user->name}}</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
