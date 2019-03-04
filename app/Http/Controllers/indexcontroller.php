@@ -21,4 +21,13 @@ class indexcontroller extends Controller
       })->get();
       return view('index' , compact('category' , 'idUserLogin', 'testimonis'));
     }
+    public function kategori(){
+      $idUserLogin = Auth::id();
+      $category = category::all();
+      $testimonis = DB::table('testimonis')
+      ->join('users', function ($join) {
+          $join->on('users.id', '=', 'testimonis.idClient');
+      })->get();
+        return view('cart',compact ('category', 'idUserLogin', 'testimonis'));
+    }
 }
