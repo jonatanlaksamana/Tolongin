@@ -26,7 +26,7 @@
                                     <td>{{$testi->created_at}}</td>
                                     <td>
 
-                                            <input class="btn btn-danger  btn-sm "  value="delete">
+                                            <input class="btn btn-danger  btn-sm"  value="delete">
                                             <input class="btn btn-secondary btn-sm" value="edit">
 
 
