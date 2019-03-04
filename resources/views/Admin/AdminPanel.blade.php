@@ -72,9 +72,8 @@
                         <a href="{{route('admin.map')}}">
                             <i class="fas fa-map-marker-alt"></i>Maps</a>
                     </li>
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-copy"></i>Pages</a>
+                    <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Pages</a> </li>
+                    <li class="has-sub"><a class="js-arrow" href="{{route('testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
                                 <a href="login.html">Login</a>
