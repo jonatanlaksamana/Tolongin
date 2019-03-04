@@ -99,12 +99,13 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template"></a>
+  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/video.png" alt="Colorlib Template"></a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">Mandiin Jojo</a></h3>
+                      <h4>Video Editor</h4>
+                      <h3><a href="#"> I can edit your video</a></h3>
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  				    						<p class="price"><span>Rp 2.000</span></p>
+  				    						<p class="price"><span>Start from Rp 1.000.000</span></p>
   				    					</div>
   				    					<div class="rating">
   			    							<p class="text-right">
@@ -121,12 +122,13 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template"></a>
+  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/translate.jpg" alt="Colorlib Template"></a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">Jual Vinson</a></h3>
+                      <h4>Translate</h4>
+  		    						<h3><a href="#">I Will Translate English To Spanish 500 Words In 1 Day Highest Quality</a></h3>
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  				    						<p class="price"><span>Rp 26.000</span></p>
+  				    						<p class="price"><span>Start from Rp 50.000</span></p>
   				    					</div>
   				    					<div class="rating">
   			    							<p class="text-right">
@@ -143,14 +145,15 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img src="images/1.jpg" alt="Colorlib Template">
+  		    					<a href="#" class="img-prod"><img src="images/b.png" alt="Colorlib Template">
 
   			    				</a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">Badut Jojo</a></h3>
+                      <h4>Business</h4>
+  		    						<h3><a href="#">I Will Create Investor Ready Financial Plans And Projections</a></h3>
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  			    							<p class="price"><span class="mr-2 price-dc">Rp 2.000</span><span class="price-sale">Rp 2.000</span></p>
+  			    							<p class="price"><span class="mr-2 price-dc">Rp 2.000.000</span><span class="price-sale">Start from Rp 1.000.000</span></p>
   			    						</div>
   			    						<div class="rating">
   			    							<p class="text-right">
@@ -167,12 +170,13 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img src="images/1.jpg" alt="Colorlib Template"></a>
+  		    					<a href="#" class="img-prod"><img src="images/web.jpg" alt="Colorlib Template"></a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">Jojo buatin Tugas</a></h3>
+                      <h4>Web Design</h4>
+  		    						<h3><a href="#">I Will Make Web And App Page Design</a></h3>
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  				    						<p class="price"><span>Rp0</span></p>
+  				    						<p class="price"><span>Start from Rp 1.500.000</span></p>
   				    					</div>
   				    					<div class="rating">
   			    							<p class="text-right">
@@ -206,7 +210,7 @@
           <div class="product-slider owl-carousel ftco-animate">
             <div class="item">
               <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="images/b.png" alt="Colorlib Template">
+                <a href="{{route('kategori')}}" class="img-prod"><img class="img-fluid" src="images/b.png" alt="Colorlib Template">
 
                 </a>
                 <div class="text pt-3 px-3">

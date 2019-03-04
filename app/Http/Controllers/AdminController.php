@@ -31,6 +31,6 @@ return view('Admin/chart');
 
     }
 
- 
+
 
 }
