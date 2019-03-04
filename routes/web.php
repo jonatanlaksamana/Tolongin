@@ -29,4 +29,4 @@ Route::get('/userprofile/{id}','UserController@profile')->name('profile');
 Route::post('/update','UserController@update')->name('update');
 Route::post('/updateFoto','UserController@updateFoto')->name('updateFoto');
 Route::get('/testimoni' , 'UserController@testimoni')->name('testimoni');
-
+Route::get('/cart','indexcontroller@kategori')->name('kategori');
