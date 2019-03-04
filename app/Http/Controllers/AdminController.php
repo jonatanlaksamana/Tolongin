@@ -27,7 +27,12 @@ return view('Admin/chart');
       return view('Admin/form');
     }
     public function map(){
-return view ('Admin/map');
+        return view ('Admin/map');
 
     }
+
+    public function testimoni(){
+        return view('Admin/testimoni');
+    }
+
 }
