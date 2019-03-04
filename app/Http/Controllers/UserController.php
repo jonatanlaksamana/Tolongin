@@ -8,11 +8,14 @@ use App\category;
 use Hash;
 use Auth;
 
+
 class UserController extends Controller
 {
     //
     public function profile(){
+
       $category=category::all();
+
       $idUserLogin = Auth::id();
       $user=user::find($idUserLogin);
         return view('userprofile',compact('category','user' , 'idUserLogin'));
