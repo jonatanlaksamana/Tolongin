@@ -7,6 +7,8 @@ use App\User;
 use App\category;
 use Hash;
 use Auth;
+use DB;
+use App\testimoni;
 
 
 class UserController extends Controller
@@ -45,6 +47,18 @@ class UserController extends Controller
   }
 
     public function testimoni(){
-        return view('user/testimoni');
+  
+    return view('user.testimoni');
+    
+        
+    }
+
+    public function updatetestimoni(){
+         $testimoni = new testimoni();
+     $testimoni->idClient = Auth::id();
+     $testimoni->isi = request('testimoni');
+     $testimoni->save();
+     return redirect()->route('home');
+
     }
 }

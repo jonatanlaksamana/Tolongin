@@ -160,10 +160,11 @@
         <!-- MAIN CONTENT-->
         <div class="main-content">
             <div class="container">
-                <form>
+                <form method="post" action="{{route('update.testi')}}">
+                @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Testimoni</label>
-                        <textarea  rows="15" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Testimoni" name="testimoni"> </textarea>
+                        <textarea  rows="15" class="form-control" id="exampleInputEmail1" name="testimoni" aria-describedby="emailHelp" placeholder="Enter Testimoni" name="testimoni"> </textarea>
                         <small id="emailHelp" class="form-text text-muted">What ever you make is precious to us so write wisely.</small>
                     </div>
 
