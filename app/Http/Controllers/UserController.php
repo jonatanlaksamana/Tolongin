@@ -43,4 +43,8 @@ class UserController extends Controller
         $user->save();
         return redirect('/userprofile/' . Auth::id());
   }
+
+    public function testimoni(){
+        return view('user/testimoni');
+    }
 }
