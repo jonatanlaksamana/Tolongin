@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9c694b8-9eeb-4986-a6c2-b91cd288a846" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admintemplate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Admin/AdminPanel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AdminPanel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/testimoni.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/testimoni.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/AdminPanel.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="-884">
+              <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -359,12 +356,12 @@
       <workItem from="1550979697455" duration="216000" />
       <workItem from="1551266579034" duration="999000" />
       <workItem from="1551271131606" duration="4215000" />
-      <workItem from="1551697011546" duration="2215000" />
+      <workItem from="1551697011546" duration="2901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14823000" />
+    <option name="totallyTimeSpent" value="15509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -580,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/AdminPanel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="-884">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
         </state>
       </provider>
     </entry>
