@@ -25,4 +25,4 @@ Route::get('/table','AdminController@tables')->name('admin.table');
 Route::get('/AdminPanel','AdminController@adminpanel')->name('admin.panel');
 Route::get('/form','AdminController@form')->name('admin.form');
 Route::get('/map','AdminController@map')->name('admin.map');
-Route::get('/userprofile','UserController@profile')->name('profile');
+Route::get('/userprofile/{id}','UserController@profile')->name('profile');

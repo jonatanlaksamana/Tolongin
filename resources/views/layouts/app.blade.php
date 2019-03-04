@@ -43,16 +43,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        @foreach( $category as $item)
-                            <a class="dropdown-item" href="shop.html">{{$item->cat}}</a>
-                        @endforeach
-
-                    </div>
-                </li>
-                <li class="nav-item active"><a href="{{route('profile')}}" class="nav-link">Profile</a></li>
+              
+                @auth
+                <li class="nav-item active"><a href="{{URL::to('userprofile/' . $idUserLogin)}}" class="nav-link">Profile</a></li>
+                @endauth
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest

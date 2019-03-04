@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\category;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -70,19 +71,16 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile_lengkap' => '',
-<<<<<<< HEAD
-            'member' => 'biasa',
-=======
             'member' => User::deafult,
             'image' => 'deafult.jpg',
->>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
             'reputasi' => 0,
             'alamat' => '',
         ]);
     }
 
     public function showRegistrationForm(){
+        $idUserLogin = Auth::id();
         $category = category::all();
-      return view('auth/register' , compact(['category']));
+      return view('auth/register' , compact('category', 'idUserLogin'));
     }
 }

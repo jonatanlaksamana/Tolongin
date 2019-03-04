@@ -50,14 +50,16 @@
       				<div class="product-slider owl-carousel ftco-animate">
       					<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template">
+  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/logo.jpg" alt="Colorlib Template">
 
   		    					</a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">JUAL JOJO</a></h3>
+                      <h4>Design Logo</h4>
+  		    						<h3><a href="#">I will Design minimalist logo for you</a></h3>
+
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  			    							<p class="price"><span class="mr-2 price-dc">Rp 10.000</span><span class="price-sale">Rp 5.000</span></p>
+  			    							<p class="price"><span class="mr-2 price-dc">Rp 500.000</span><span class="price-sale"> Start From Rp 300.000</span></p>
   			    						</div>
   			    						<div class="rating">
   			    							<p class="text-right">
@@ -74,12 +76,13 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/1.jpg" alt="Colorlib Template"></a>
+  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/coding.jpeg" alt="Colorlib Template"></a>
   		    					<div class="text pt-3 px-3">
-  		    						<h3><a href="#">Pijat Jojo</a></h3>
+                      <h4>Java Programming</h4>
+  		    						<h3><a href="#"> I will transform your idea into a professional java program</a></h3>
   		    						<div class="d-flex">
   		    							<div class="pricing">
-  				    						<p class="price"><span>Rp 5.000</span></p>
+  				    						<p class="price"><span>Start From Rp 2.000.000</span></p>
   				    					</div>
   				    					<div class="rating">
   			    							<p class="text-right">
@@ -190,7 +193,87 @@
       	</div>
       </section>
   <!-- SELESAI YANG POPULER -->
+  <section class="ftco-section ftco-product">
+    <div class="container">
+      <div class="row justify-content-center mb-3 pb-3">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+          <h1 class="big">Explore</h1>
+          <h2 class="mb-4">Explore The Marketplace</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="product-slider owl-carousel ftco-animate">
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img class="img-fluid" src="images/b.png" alt="Colorlib Template">
 
+                </a>
+                <div class="text pt-3 px-3">
+
+                  <div class="d-flex">
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img class="img-fluid" src="images/dm.png" alt="Colorlib Template"></a>
+                <div class="text pt-3 px-3">
+                  <div class="d-flex">
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img class="img-fluid" src="images/gd.png" alt="Colorlib Template"></a>
+                <div class="text pt-3 px-3">
+                  <div class="d-flex">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img class="img-fluid" src="images/pt.png" alt="Colorlib Template"></a>
+                <div class="text pt-3 px-3">
+                  <div class="d-flex">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img src="images/vs.png" alt="Colorlib Template">
+
+                </a>
+                <div class="text pt-3 px-3">
+                  <div class="d-flex">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="product">
+                <a href="#" class="img-prod"><img src="images/wt.png" alt="Colorlib Template"></a>
+                <div class="text pt-3 px-3">
+                  <div class="d-flex">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
       <section class="ftco-section testimony-section bg-light">
@@ -205,76 +288,24 @@
             	<div class="row ftco-animate">
   		          <div class="col-md-12">
   		            <div class="carousel-testimony owl-carousel ftco-owl">
-  		              <div class="item">
+
+										@foreach($testimonis as $testimoni)
+										<div class="item">
   		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
+  		                  <div class="user-img mb-4" style="background-image: url(/storage/{{$testimoni->image}})">
   		                    <span class="quote d-flex align-items-center justify-content-center">
   		                      <i class="icon-quote-left"></i>
   		                    </span>
   		                  </div>
   		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
+  		                    <p class="mb-4">{{$testimoni->isi}}</p>
+  		                    <p class="name">{{$testimoni->name}}</p>
   		                    <span class="position">Customer</span>
   		                  </div>
   		                </div>
   		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-  		              <div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(images/1.jpg)">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">SAYA SUKA JOJO</p>
-  		                    <p class="name">JOJO</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
+										@endforeach
+
   		            </div>
   		          </div>
   		        </div>
