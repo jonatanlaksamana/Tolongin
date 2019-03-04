@@ -12,8 +12,11 @@
       <img src="/storage/{{$user->image}}" class="img-responsive" style="width:100%" alt="Image">
       <p></p>
       <p class="text-primary">Ganti Photo Profile</p>
-            <input placeholder="Ganti Profile" type="file" accept="image/*">
-
+      <form action="{{route('updateFoto')}}" method="post" enctype='multipart/form-data'>
+      @csrf
+            <input placeholder="Ganti Profile" type="file" name="gantifoto" accept="image/*">
+            <input type="submit" class="btn btn-primary-outline"  value="submit"">
+      </form>
 
 
     </div>
@@ -34,6 +37,10 @@
         <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">
      Edit profile</a>
     </div>
+
+
+
+    <!-- ini modal -->
     <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -45,20 +52,23 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-        <div class="md-form mb-5">
+    <form method="post" action="{{route('update')}}"> 
+               @csrf
+      
+      <div class="md-form mb-5">
           <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="orangeForm-name" class="form-control validate">
+          <input type="text" id="name" name="nama" class="form-control validate">
           <label data-error="wrong" data-success="right" for="orangeForm-name">Nama</label>
         </div>
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="orangeForm-email" class="form-control validate">
+          <input type="email" id="orangeForm-email" name="email" class="form-control validate">
           <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
         </div>
 
         <div class="md-form mb-4">
           <i class="fas fa-lock prefix grey-text"></i>
-          <input type="password" id="orangeForm-pass" class="form-control validate">
+          <input type="password" id="orangeForm-pass" name="pass" class="form-control validate">
           <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
         </div>
 
@@ -66,6 +76,9 @@
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn btn-deep-orange">Submit</button>
       </div>
+      
+      </form>
+    
     </div>
   </div>
 </div>
