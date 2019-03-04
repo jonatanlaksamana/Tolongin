@@ -47,7 +47,16 @@
               
                 @auth
                 <li class="nav-item active"><a href="{{URL::to('userprofile/' . $idUserLogin)}}" class="nav-link">Profile</a></li>
+                    @if($user->member == "admin")
+                        <li class="nav-item active"><a href="{{URL::to('userprofile/' . $idUserLogin)}}" class="nav-link">Profile</a></li>
+                        <li class="nav-item active"><a href="{{route('admin.panel')}}" class="nav-link">Admin</a></li>
+                    @endif
                 @endauth
+
+
+
+
+
 
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->

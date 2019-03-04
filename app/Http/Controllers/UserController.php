@@ -9,7 +9,7 @@ use Hash;
 use Auth;
 use DB;
 use App\testimoni;
-
+use File;
 
 class UserController extends Controller
 {
@@ -39,8 +39,9 @@ class UserController extends Controller
       $user = user::find(Auth::id());
         $status = Request::hasFile('gantifoto');
         $image = request('gantifoto');
-        $user->image =  time().".".$image->extension();
         $dest =  storage_path('/app/public');
+        File::delete($dest. "/" . $user->image ."");
+        $user->image =  time().".".$image->extension();
         $image->move($dest,$user->image);
         $user->save();
         return redirect('/userprofile/' . Auth::id());
@@ -48,13 +49,13 @@ class UserController extends Controller
 
     public function testimoni(){
   
-    return view('user.testimoni');
+        return view('user.testimoni');
     
         
     }
 
     public function updatetestimoni(){
-         $testimoni = new testimoni();
+        $testimoni = new testimoni();
      $testimoni->idClient = Auth::id();
      $testimoni->isi = request('testimoni');
      $testimoni->save();

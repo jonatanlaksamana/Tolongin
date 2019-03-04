@@ -76,7 +76,7 @@
   	    				</div>
   	    				<div class="item">
   		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/coding.jpeg" alt="Colorlib Template"></a>
+  		    					<a href="#" class="img-prod"><img class="img-fluid" src="/images/coding.jpeg" alt="Colorlib Template"></a>
   		    					<div class="text pt-3 px-3">
                       <h4>Java Programming</h4>
   		    						<h3><a href="#"> I will transform your idea into a professional java program</a></h3>

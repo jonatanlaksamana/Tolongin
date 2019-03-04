@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\category;
 use Auth;
 use DB;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -27,12 +28,13 @@ class HomeController extends Controller
     public function index()
     {
         $idUserLogin = Auth::id();
-        $testimonis = DB::table('testimonis')
-        ->join('users', function ($join) {
-            $join->on('users.id', '=', 'testimonis.idClient');
-        })->get();
+        $user = User::find($idUserLogin);
         $category = category::all();
-      return view('index' , compact('category' , 'idUserLogin' , 'testimonis'));
+        $testimonis = DB::table('testimonis')
+            ->join('users', function ($join) {
+                $join->on('users.id', '=', 'testimonis.idClient');
+            })->get();
+      return view('index' , compact('category' , 'idUserLogin' , 'testimonis','user'));
     }
 
 }
