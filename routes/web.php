@@ -28,5 +28,5 @@ Route::get('/map','AdminController@map')->name('admin.map');
 Route::get('/userprofile/{id}','UserController@profile')->name('profile');
 Route::post('/update','UserController@update')->name('update');
 Route::post('/updateFoto','UserController@updateFoto')->name('updateFoto');
-Route::get('/testimoni' , 'AdminController@testimoni')->name('testimoni');
+Route::get('/testimoni' , 'UserController@testimoni')->name('testimoni');
 
