@@ -1,4 +1,5 @@
 
+
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard Admin</title>
+    <title>Dashboard Adminn</title>
 
     <!-- Fontfaces CSS-->
     <link href="/css/font-face.css" rel="stylesheet" media="all">
@@ -37,14 +38,58 @@
 <div class="page-wrapper">
 
 
-    {{--<!-- MENU SIDEBAR-->--}}
+    <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="/images/icon/3.png" alt="Cool Admin" />
+                <img src="images/icon/3.png" alt="Cool Admin" />
             </a>
         </div>
+        <div class="menu-sidebar__content js-scrollbar1">
+            <nav class="navbar-sidebar">
+                <ul class="list-unstyled navbar__list">
+                    <li class="active has-sub">
+                        <a class="js-arrow" href="{{route('admin.panel')}}">
+                            <i class="fas fa-tachometer-alt"></i>Dashboard Admin</a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
 
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.chart')}}">
+                            <i class="fas fa-chart-bar"></i>Charts</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.table')}}">
+                            <i class="fas fa-table"></i>Tables</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.form')}}">
+                            <i class="far fa-check-square"></i>Forms</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.map')}}">
+                            <i class="fas fa-map-marker-alt"></i>Maps</a>
+                    </li>
+                    <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Pages</a> </li>
+                    <li class="has-sub"><a class="js-arrow" href="{{route('testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="register.html">Register</a>
+                        </li>
+                        <li>
+                            <a href="forget-pass.html">Forget Password</a>
+                        </li>
+                    </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
     </aside>
     <!-- END MENU SIDEBAR-->
 
@@ -155,29 +200,11 @@
         </header>
         <!-- END HEADER DESKTOP-->
 
-
-
         <!-- MAIN CONTENT-->
-        <div class="main-content">
-            <div class="container">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Testimoni</label>
-                        <textarea  rows="15" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Testimoni" name="testimoni"> </textarea>
-                        <small id="emailHelp" class="form-text text-muted">What ever you make is precious to us so write wisely.</small>
-                    </div>
-
-
-                    <input type="submit" class="btn btn-success" value="add testimoni">
-                </form>
-
-
-            </div>
-
-        </div>
+        @yield('content')
         <!-- END MAIN CONTENT-->
+        <!-- END PAGE CONTAINER-->
     </div>
-    <!-- END PAGE CONTAINER-->
 
 </div>
 
@@ -203,6 +230,10 @@
 </script>
 
 <!-- Main JS-->
-<script src="js/mainn.js"></script>
+<script src="/js/mainn.js"></script>
+
+
 </body>
+
+</html>
 <!-- end document-->
