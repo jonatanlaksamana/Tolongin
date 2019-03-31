@@ -35,6 +35,7 @@ class HomeController extends Controller
                 $join->on('users.id', '=', 'testimonis.idClient');
             })->get();
       return view('index' , compact('category' , 'idUserLogin' , 'testimonis','user'));
+
     }
 
 }

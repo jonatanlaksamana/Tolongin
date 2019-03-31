@@ -26,7 +26,7 @@
                                             <div class="text">
 
                                               <!-- Jumlah member boi -->
-                                                <h2>2</h2>
+                                                <h2>{{count($User)}}</h2>
                                                 <span>Jumlah Member</span>
                                             </div>
                                         </div>
@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text">
                                               <!-- JASA YANG TERPAKAI  -->
-                                                <h2>10</h2>
+                                                <h2>{{count($Order)}}</h2>
                                                 <span>Jasa yang terpakai</span>
                                             </div>
                                         </div>
@@ -62,12 +62,17 @@
                                                 <i class="zmdi zmdi-money"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>Rp 10.000</h2>
+                                                <h2>
+                                                  @foreach($joinTable as $row)
+                                                        {{$row->harga}}
+
+                                                  @endforeach
+                                                </h2>
                                                 <span>total earnings</span>
                                             </div>
                                         </div>
 
-                                    </div>
+                                     </div>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +145,7 @@
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
-                                                <th>date</th>
+                                                <th>date</th>  
                                                 <th>order ID</th>
                                                 <th>Nama jasa</th>
                                                   <th>Penyedia Jasa</th>
@@ -157,7 +162,7 @@
                                                 <td class="text-right">Rp 10.000</td>
                                                 <td class="text-right">Rp 10.000</td>
                                             </tr>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td>2018-09-29 05:57</td>
                                                 <td>000001</td>
                                                 <td>Pijat ++ JOJO</td>
@@ -212,7 +217,7 @@
                                                   <th>Jojo ganteng</th>
                                                 <td class="text-right">Rp 10.000</td>
                                                 <td class="text-right">Rp 10.000</td>
-                                            </tr>
+                                            </tr> -->
 
 
                                         </tbody>

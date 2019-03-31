@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+
+use App\Order;
+use DB;
 use Illuminate\Support\Facades\Auth;
 use DB;
+
 
 
 class AdminController extends Controller
@@ -15,9 +19,17 @@ class AdminController extends Controller
 
 
     public function index(){
-       $user = User::find(Auth::id());
 
-        return view('Admin.AdminPanel' , compact('user'));
+        $User=User::all();
+        $Order=Order::all();
+        $joinTable=DB::table('requests')
+        ->join('orders', function ($join) {
+            $join->on('requests.idClient', '=', 'orders.idPemberiJasa');
+        })
+        ->get();
+
+        return view('Admin.AdminPanel', compact('User','Order','joinTable'));
+
     }
     public function chart(){
         $user = User::find(Auth::id());
