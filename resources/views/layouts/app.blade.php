@@ -58,7 +58,7 @@
 <style>
 .fontlara {
   font-family: 'Roboto Mono', monospace;
-  font-size: 35px;
+  font-size: 15px;
   margin-right:10px;
   margin-top:30px;
   color:#ADD8E6;
@@ -67,10 +67,12 @@
 .search{
 
 height:70px;
-width:1100px;
-margin-top:20px;
+width:500px;
+margin-top:30px;
 border-radius:7px;
-border:1px solid;
+border:0.2px solid gray;
+height:50px;
+font-size: 15px;
 }
 .vl {
   border-left: 5px solid #ADD8E6;
@@ -87,10 +89,10 @@ padding-left:40px;
 
 }
 .glyphicon {
-    font-size: 45px;
+    font-size: 25px;
     color: gray;
     margin-left:50px;
-    margin-top:30px;
+    margin-top:40px;
 }
 
 </style>
@@ -101,7 +103,7 @@ padding-left:40px;
 <nav class="navbar navbar-expand-lg navbar navbar-light">
 <div class="logo">
             <a href="{{route('home')}}">
-                <img src="/images/icon/3.png" alt="Cool Admin" />
+                <img src="/images/icon/3.png" alt="Cool Admin" width="280px" height="80px"/>
             </a>
         </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
