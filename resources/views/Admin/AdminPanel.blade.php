@@ -316,7 +316,9 @@
                                         <div class="au-message js-list-load">
                                             <div class="au-message__noti">
                                                 <p>You Have
-                                                    <span>2</span>
+
+                                                    //count
+                                                    <span>{{count($chats)}}</span>
 
                                                     new messages
                                                 </p>
@@ -331,12 +333,12 @@
                                                                 </div>
                                                             </div>
                                                             <div class="text">
-                                                                <h5 class="name">Jaki Cantiq</h5>
-                                                                <p>Hi ganteng!</p>
+                                                                <h5 class="name">{{$joinTable1->name}}</h5>
+                                                                <p>{{$joinTable1->isi}}</p>
                                                             </div>
                                                         </div>
                                                         <div class="au-message__item-time">
-                                                            <span>12 Min ago</span>
+                                                            <span>{{$joinTable1->created_at}}}</span>
                                                         </div>
                                                     </div>
                                                 </div>

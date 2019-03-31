@@ -8,6 +8,7 @@ use App\Order;
 use DB;
 //alw
 use App\Request;
+use App\Chat;
 
 class AdminController extends Controller
 {
@@ -15,22 +16,23 @@ class AdminController extends Controller
     public function index(){
         $User=User::all();
         $Order=Order::all();
+        $Chat=Chat::all();
+
         $joinTable=DB::table('requests')
         ->join('orders', function ($join) {
             $join->on('requests.idClient', '=', 'orders.idPemberiJasa');
         })
         ->get();
         //alw
-        $requests = DB::table('requests')
-            ->join('orders', 'users.id', '=', 'contacts.user_id')
-            ->join('orders', 'users.id', '=', 'orders.user_id')
-            ->select('users.*', 'contacts.phone', 'orders.price')
-            ->get();
+        $joinTable1=DB::table('chats')
+        ->join('users', 'users.id', '=', 'chats.idClient1')
+        ->join('users', 'users.id', '=', 'chats.idClient2')
+        ->get();        
 
-        return view('Admin.AdminPanel', compact('User','Order','joinTable'));
+        return view('Admin.AdminPanel', compact('User','Order','joinTable','joinTable1'));
     }
     public function chart(){
-return view('Admin/chart');
+        return view('Admin/chart');
 
     }
     public function tables(){
