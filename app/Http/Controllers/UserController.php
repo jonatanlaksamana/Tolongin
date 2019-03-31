@@ -25,11 +25,26 @@ class UserController extends Controller
 
     public function update(){
      $user = user::find(Auth::id());
-
-     $user->name = request('nama');
-     $user->email = request('email');
-     $user->password = hash::make(request('pass'));
-
+      $editName = request('nama');
+      $email = request('email');
+      $pass = request('pass');
+      $alamat = request('alamat');
+      $nohp = request('nohp');
+      if($editName != ''){
+        $user->name = $editName;
+      }
+      if($alamat != ''){
+        $user->alamat = $alamat;
+      }
+      if($nohp != ''){
+        $user->phone_number = $nohp;
+      }
+      if($email != ''){
+        $user->email = $email;
+      }
+      if($pass != ''){
+        $user->password = hash::make($pass);
+      }
      $user->save();
       return redirect('/userprofile/' . Auth::id() . "" );
 

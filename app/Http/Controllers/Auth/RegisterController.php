@@ -71,14 +71,13 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile_lengkap' => '',
-
-
             'member' => User::deafult,
             'image' => 'deafult.jpg',
-
+           'isPenjual' => false,
 
             'reputasi' => 0,
             'alamat' => '',
+
         ]);
     }
 

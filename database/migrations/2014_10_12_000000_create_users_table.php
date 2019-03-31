@@ -20,11 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('image');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('profile_lengkap');
+            $table->string('profile_lengkap')->nullable();
             $table->string('member');
             $table->integer('reputasi');
             $table->string('alamat');
-
+            $table->string('phone_number');
+            $table->boolean('isPenjual');
             $table->rememberToken();
             $table->timestamps();
 

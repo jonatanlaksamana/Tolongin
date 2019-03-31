@@ -2,61 +2,50 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-
 use App\Order;
 use DB;
-use Illuminate\Support\Facades\Auth;
-
-
+//alw
+use App\Request;
+use App\chat;
 
 class AdminController extends Controller
 {
     //
-
-
-
     public function index(){
-
         $User=User::all();
-        $Order=Order::all();
-        $joinTable=DB::table('requests')
+        $Chat=chat::all();
+
+        $joinTable=DB::table('jasas')
         ->join('orders', function ($join) {
-            $join->on('requests.idClient', '=', 'orders.idPemberiJasa');
+            $join->on('jasas.user_id', '=', 'orders.idJasa');
         })
         ->get();
-        return view('Admin.AdminPanel', compact('User','Order','joinTable'));
-
+        
+        $orders = DB::table('orders')
+            ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
+            ->join('users', 'users.id', '=', 'jasas.user_id')
+            ->get();
+        return view('Admin.AdminPanel', compact('User','joinTable','Chat','orders'));
     }
     public function chart(){
-        $user = User::find(Auth::id());
-        return view('Admin/chart', compact('user') );
+        return view('Admin/chart');
 
     }
     public function tables(){
-        $user = User::find(Auth::id());
 
-      return view('Admin.table', compact('user'));
+      return view('Admin/table');
     }
+    public function adminpanel(){
 
+      return view('Admin/AdminPanel');
+    }
     public function form(){
-        $user = User::find(Auth::id());
 
-      return view('Admin/form', compact('user'));
+      return view('Admin/form');
     }
     public function map(){
-        $user = User::find(Auth::id());
-        return view ('Admin/map', compact('user'));
+return view ('Admin/map');
 
     }
-    public function testimoni(){
-        $user = User::find(Auth::id());
-        $testimoni = DB::table('testimonis')->leftJoin('users', 'testimonis.idClient', '=', 'users.id')->get();
-        return view ('Admin.testimoni', compact('user' , 'testimoni'));
-
-    }
-
-
-
 }

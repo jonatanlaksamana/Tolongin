@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('alamat') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="alamat" type="text" class="form-control" name="alamat">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nohp" class="col-md-4 col-form-label text-md-right">{{ __('No Hp') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nohp" type="text" class="form-control" name="nohp">
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
