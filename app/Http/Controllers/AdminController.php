@@ -2,34 +2,31 @@
 
 namespace App\Http\Controllers;
 
-
 use App\User;
 use App\Order;
 use DB;
 //alw
 use App\Request;
-use App\Chat;
+use App\chat;
 
 class AdminController extends Controller
 {
     //
     public function index(){
         $User=User::all();
-        $Order=Order::all();
-        $Chat=Chat::all();
+        $Chat=chat::all();
 
-        $joinTable=DB::table('requests')
+        $joinTable=DB::table('jasas')
         ->join('orders', function ($join) {
-            $join->on('requests.idClient', '=', 'orders.idPemberiJasa');
+            $join->on('jasas.user_id', '=', 'orders.idJasa');
         })
         ->get();
-        //alw
-        $joinTable1=DB::table('chats')
-        ->join('users', 'users.id', '=', 'chats.idClient1')
-        ->join('users', 'users.id', '=', 'chats.idClient2')
-        ->get();        
-
-        return view('Admin.AdminPanel', compact('User','Order','joinTable','joinTable1'));
+        
+        $orders = DB::table('orders')
+            ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
+            ->join('users', 'users.id', '=', 'jasas.user_id')
+            ->get();
+        return view('Admin.AdminPanel', compact('User','joinTable','Chat','orders'));
     }
     public function chart(){
         return view('Admin/chart');

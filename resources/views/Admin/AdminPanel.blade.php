@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="text">
                                               <!-- JASA YANG TERPAKAI  -->
-                                                <h2>{{count($Order)}}</h2>
+                                                <h2>{{count($orders)}}</h2>
                                                 <span>Jasa yang terpakai</span>
                                             </div>
                                         </div>
@@ -154,72 +154,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($orders as $order)
                                             <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
+                                                <td>{{$order->created_at}}</td>
+                                                <td>{{$order->id}}</td>
+                                                <td>{{$order->jasaName}}</td>
+                                                  <th>{{$order->name}}</th>
+                                                <td class="text-right">{{$order->harga}}</td>
                                                 <td class="text-right">Rp 10.000</td>
                                             </tr>
-                                            <!-- <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>000001</td>
-                                                <td>Pijat ++ JOJO</td>
-                                                  <th>Jojo ganteng</th>
-                                                <td class="text-right">Rp 10.000</td>
-                                                <td class="text-right">Rp 10.000</td>
-                                            </tr> -->
-
-
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -317,50 +261,30 @@
                                             <div class="au-message__noti">
                                                 <p>You Have
 
-                                                    //count
-                                                    <span>{{count($chats)}}</span>
+                                                    <span>{{count($Chat)}}</span>
 
                                                     new messages
                                                 </p>
                                             </div>
+                                            @foreach($Chat as $item)
                                             <div class="au-message-list">
                                                 <div class="au-message__item unread">
                                                     <div class="au-message__item-inner">
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/2.jpg" alt="Jaki2">
-                                                                </div>
+                                                            
                                                             </div>
                                                             <div class="text">
-                                                                <h5 class="name">{{$joinTable1->name}}</h5>
-                                                                <p>{{$joinTable1->isi}}</p>
+                                                                <h5 class="name">{{$item->nama}}</h5>
+                                                                <p>{{$item->isi}}</p>
                                                             </div>
                                                         </div>
                                                         <div class="au-message__item-time">
-                                                            <span>{{$joinTable1->created_at}}}</span>
+                                                            <span>{{$item->created_at}}</span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="au-message__item unread">
-                                                    <div class="au-message__item-inner">
-                                                        <div class="au-message__item-text">
-                                                            <div class="avatar-wrap online">
-                                                                <div class="avatar">
-                                                                    <img src="images/icon/3.jpg" alt="jaki3">
-                                                                </div>
-                                                            </div>
-                                                            <div class="text">
-                                                                <h5 class="name">Jaki juga</h5>
-                                                                <p>Ayuk makan daging anjing dengan sayur kol!</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="au-message__item-time">
-                                                            <span>11:00 PM</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                            @endforeach
 
 
 
