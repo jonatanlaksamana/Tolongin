@@ -5,7 +5,7 @@
   <title>Tolongin.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
@@ -114,39 +114,53 @@
               <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                   <h2 class="ftco-heading-2">Tolongin</h2>
-                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">Tentang Kami</a></li>
+                    <li><a href="{{ route('login') }}" class="py-2 d-block">Login</a></li>
+                    <li><a href="{{ route('register')}}" class="py-2 d-block">Register</a></li>
+                    <li><a href="#" class="py-2 d-block">Kegiatan Kami</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Beli</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">Cara Belanja</a></li>
+                    <li><a href="#" class="py-2 d-block">Pembayaran</a></li>
+                    <li><a href="#" class="py-2 d-block">Pengembalian Dana</a></li>
+                    </ul>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Jual</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">Cara Berjualan Online</a></li>
+                    <li><a href="#" class="py-2 d-block">Penarikan Dana</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Bantuan</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="py-2 d-block">Syarat dan Ketentuan</a></li>
+                    <li><a href="#" class="py-2 d-block">Kebijakan Privasi</a></li>
+                    <li><a href="#" class="py-2 d-block">Komplain Pesanan</a></li>
+                    <li><a href="#" class="py-2 d-block">Hubungi Kami</a></li>
+                    <li><a href="#" class="py-2 d-block">Panduan Keamanan</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-md">
                 <div class="ftco-footer-widget mb-4 ml-md-5">
-                  <h2 class="ftco-heading-2">Menu</h2>
-                  <ul class="list-unstyled">
-                    <li><a href="#" class="py-2 d-block">Kategori</a></li>
-                    <li><a href="{{ route('login') }}" class="py-2 d-block">Log in</a></li>
-                    <li><a href="{{ route('register')}}" class="py-2 d-block">Sign Up</a></li>
-                    <li><a href="#" class="py-2 d-block">Contact</a></li>
+                  <h2 class="ftco-heading-2">Ikuti Kami</h2>
+                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                    <li><a href="#"><i class="fab fa-twitter" style="font-size:36px"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook" style="font-size:36px"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" style="font-size:36px"></i></a></li>
                   </ul>
-                </div>
-              </div>
-              <div class="col-md-4">
-                 <div class="ftco-footer-widget mb-4">
-                  <h2 class="ftco-heading-2">HELP INI ISI BRP</h2>
-                  <div class="d-flex">
-    	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-    	                <li><a href="#" class="py-2 d-block">Cara daftar</a></li>
-    	                <li><a href="#" class="py-2 d-block">Cara Pakai Jasa</a></li>
-    	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-    	                <li><a href="#" class="py-2 d-block">Pembayaran</a></li>
-    	              </ul>
-    	              <ul class="list-unstyled">
-    	                <li><a href="#" class="py-2 d-block">FAQs</a></li>
-    	                <li><a href="#" class="py-2 d-block">Contact</a></li>
-    	              </ul>
-    	            </div>
                 </div>
               </div>
 
