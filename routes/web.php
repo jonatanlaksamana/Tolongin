@@ -15,7 +15,7 @@
 
 
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::get('/' , 'indexcontroller@index')->name('home');
 Route::get('/home' , 'HomeController@index')->name('index')->middleware('verified');
