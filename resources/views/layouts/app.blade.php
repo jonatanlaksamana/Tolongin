@@ -70,14 +70,14 @@ height:70px;
 width:500px;
 margin-top:30px;
 border-radius:7px;
-border:0.2px solid gray;
+border:1px solid #ADD8E6;
 height:50px;
 font-size: 15px;
 }
 .vl {
   border-left: 5px solid #ADD8E6;
-  height: 70px;
-  margin-top:20px;
+  height: 50px;
+  margin-top:30px;
   margin-left:20px;
 }
 .space{
@@ -85,7 +85,7 @@ padding : 10px;
 
 }
 .kiri{
-padding-left:40px;
+padding-left:100px;
 
 }
 .glyphicon {
@@ -112,7 +112,7 @@ padding-left:40px;
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item "><input class="search"type="text" placeholder=""></li>
+    <li class="nav-item "><input class="search"type="text" placeholder="        Search"></li>
  
 
                 <div class="space"></div>
