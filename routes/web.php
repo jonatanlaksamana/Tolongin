@@ -31,7 +31,4 @@ Route::get('/testimoni' , 'UserController@testimoni')->name('testimoni');
 Route::get('/cart','indexcontroller@kategori')->name('kategori');
 Route::post('/updatetestimoni' , 'UserController@updatetestimoni')->name('update.testi');
 Route::get('/admin/testimoni' , 'AdminController@testimoni')->name('admin.testimoni');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/jasa','UserController@jasa')->name('jasa');
