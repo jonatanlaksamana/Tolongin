@@ -77,7 +77,7 @@ class RegisterController extends Controller
             'image' => 'deafult.jpg',
             'reputasi' => 0,
             'alamat' => \request('alamat'),
-            'phone_number' => 'kontol',
+            'phone_number' => \request('phone'),
            'isPenjual' => false,
 
         ]);
