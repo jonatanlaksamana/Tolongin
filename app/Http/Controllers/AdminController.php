@@ -8,7 +8,6 @@ use App\User;
 use App\Order;
 use DB;
 use Illuminate\Support\Facades\Auth;
-use DB;
 
 
 
@@ -27,7 +26,6 @@ class AdminController extends Controller
             $join->on('requests.idClient', '=', 'orders.idPemberiJasa');
         })
         ->get();
-
         return view('Admin.AdminPanel', compact('User','Order','joinTable'));
 
     }
@@ -41,11 +39,7 @@ class AdminController extends Controller
 
       return view('Admin.table', compact('user'));
     }
-    public function adminpanel(){
-        $user = User::find(Auth::id());
 
-      return view('Admin/AdminPanel', compact('user'));
-    }
     public function form(){
         $user = User::find(Auth::id());
 

@@ -103,20 +103,9 @@
     </div>
 </nav>
 <!-- AKHIRNAV KU -->
-
-
-<main class="py-4">
-    @yield('content')
-</main>
-
-{}}
-
-</div>
-
-
-        <main class="py-4">
+  <main class="py-4">
             @yield('content')
-        </main>
+  </main>
 
 
         <footer class="ftco-footer bg-light ftco-section">
