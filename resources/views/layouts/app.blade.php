@@ -157,9 +157,9 @@
                 <div class="ftco-footer-widget mb-4 ml-md-5">
                   <h2 class="ftco-heading-2">Ikuti Kami</h2>
                   <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                    <li><a href="#"><i class="fab fa-twitter" style="font-size:36px"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook" style="font-size:36px"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram" style="font-size:36px"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" style="font-size:36px; color:lightblue;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook" style="font-size:36px; color:darkblue;"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram" style="font-size:36px; color:blue;"></i></a></li>
                   </ul>
                 </div>
               </div>
