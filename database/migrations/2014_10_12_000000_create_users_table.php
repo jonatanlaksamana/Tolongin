@@ -20,10 +20,11 @@ class CreateUsersTable extends Migration
             $table->string('image');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('profile_lengkap');
+            $table->string('profile_lengkap')->nullable();
             $table->string('member');
-            $table->integer('reputasi');
-            $table->string('alamat');
+            $table->integer('reputasi')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('nohp')->nullable();
 
             $table->rememberToken();
             $table->timestamps();
