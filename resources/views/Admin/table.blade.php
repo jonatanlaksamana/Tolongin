@@ -27,15 +27,16 @@
                                               </tr>
                                           </thead>
                                           <tbody>
-                                              <tr>
-                                                  <td>2018-09-29 05:57</td>
-                                                  <td>000001</td>
-                                                  <td>Pijat ++ JOJO</td>
-                                                    <th>Jojo ganteng</th>
-                                                  <td class="text-right">Rp 10.000</td>
-                                                  <td class="text-right">Rp 10.000</td>
-                                              </tr>
-
+                                            @foreach($orders as $order)
+                                                <tr>
+                                                    <td>{{$order->created_at}}</td>
+                                                    <td>{{$order->id}}</td>
+                                                    <td>{{$order->jasaName}}</td>
+                                                    <th>{{$order->name}}</th>
+                                                    <td class="text-right">{{$order->harga}}</td>
+                                                    <td class="text-right">Rp 10.000</td>
+                                                </tr>
+                                            @endforeach
                                           </tbody>
                                       </table>
                                   </div>

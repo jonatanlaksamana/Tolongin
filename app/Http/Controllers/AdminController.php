@@ -33,8 +33,12 @@ class AdminController extends Controller
 
     }
     public function tables(){
-
-      return view('Admin/table');
+        $orders = DB::table('orders')
+        ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
+        ->join('users', 'users.id', '=', 'jasas.user_id')
+        ->get();
+    
+      return view('Admin/table', compact('orders'));
     }
     public function adminpanel(){
 

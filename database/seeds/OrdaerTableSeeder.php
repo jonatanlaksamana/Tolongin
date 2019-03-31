@@ -17,5 +17,14 @@ class OrdaerTableSeeder extends Seeder
             'idJasa' => 1,
         ]);
      
+        DB::table('orders')->insert([
+            'idClient' => 1,
+            'idJasa' => 1,
+        ]);
+
+        DB::table('orders')->insert([
+            'idClient' => 5,
+            'idJasa' => 2,
+        ]);
     }
 }
