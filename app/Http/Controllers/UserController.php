@@ -62,4 +62,11 @@ class UserController extends Controller
      return redirect()->route('home');
 
     }
+
+    public function jasa(){
+  
+      return view('/jasa');
+  
+      
+  }
 }
