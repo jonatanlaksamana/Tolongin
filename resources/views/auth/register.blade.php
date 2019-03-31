@@ -73,7 +73,7 @@
                             <label for="nohp" class="col-md-4 col-form-label text-md-right">{{ __('No Hp') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nohp" type="text" class="form-control" name="nohp">
+                                <input id="nohp" type="text" class="form-control" name="phone">
                             </div>
                         </div>
 

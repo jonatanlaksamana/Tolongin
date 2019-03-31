@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\request;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\category;
 use Auth;
+
 
 class RegisterController extends Controller
 {
@@ -70,13 +72,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'profile_lengkap' => '',
+            'profile_lengkap' => 'profile_lengkap',
             'member' => User::deafult,
             'image' => 'deafult.jpg',
-           'isPenjual' => false,
-
             'reputasi' => 0,
-            'alamat' => '',
+            'alamat' => \request('alamat'),
+            'phone_number' => 'kontol',
+           'isPenjual' => false,
 
         ]);
     }
