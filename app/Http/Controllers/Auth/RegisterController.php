@@ -70,12 +70,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'profile_lengkap' => '',
-<<<<<<< HEAD
-            'member' => 'biasa',
-=======
+
             'member' => User::deafult,
             'image' => 'deafult.jpg',
->>>>>>> 43d9ce46d1151518e63a845e6a97219d009dbae1
+
             'reputasi' => 0,
             'alamat' => '',
         ]);
@@ -83,6 +81,6 @@ class RegisterController extends Controller
 
     public function showRegistrationForm(){
         $category = category::all();
-      return view('auth/register' , compact(['category']));
+      return view('auth/register' , compact('category'));
     }
 }
