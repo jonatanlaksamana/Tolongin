@@ -16,5 +16,6 @@ class OrdaerTableSeeder extends Seeder
             'idClient' => 1,
             'idJasa' => 1,
         ]);
+     
     }
 }

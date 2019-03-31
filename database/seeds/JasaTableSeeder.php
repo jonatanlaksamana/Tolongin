@@ -15,7 +15,7 @@ class JasaTableSeeder extends Seeder
         DB::table('jasas')->insert([
            'user_id' => 1,
             'category_id' => 1,
-            'name' => 'code php',
+            'jasaName' => 'code php',
             'harga' => 500000
         ]);
     }

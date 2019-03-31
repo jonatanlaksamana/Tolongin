@@ -14,7 +14,7 @@ class ChatsTableSeeder extends Seeder
         //
         DB::table('chats')->insert([
             'idClient1' => 2,
-            'idClient2' => 1,
+            'nama'=> 'jojo',
             'isi' => 'test',
             'status' => 0,
         ]);
