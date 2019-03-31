@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->string('member');
             $table->integer('reputasi');
             $table->string('alamat');
-
+            $table->string('phone_number');
+            $table->boolean('isPenjual');
             $table->rememberToken();
             $table->timestamps();
 
