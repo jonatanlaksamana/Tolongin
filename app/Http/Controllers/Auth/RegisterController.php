@@ -73,9 +73,11 @@ class RegisterController extends Controller
             'profile_lengkap' => '',
             'member' => User::deafult,
             'image' => 'deafult.jpg',
+           'isPenjual' => false,
+
             'reputasi' => 0,
             'alamat' => '',
-            'nohp' => '',
+
         ]);
     }
 

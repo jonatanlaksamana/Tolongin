@@ -22,10 +22,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('profile_lengkap')->nullable();
             $table->string('member');
-            $table->integer('reputasi')->nullable();
-            $table->string('alamat')->nullable();
-            $table->string('nohp')->nullable();
-
+            $table->integer('reputasi');
+            $table->string('alamat');
+            $table->string('phone_number');
+            $table->boolean('isPenjual');
             $table->rememberToken();
             $table->timestamps();
 

@@ -37,7 +37,7 @@ class UserController extends Controller
         $user->alamat = $alamat;
       }
       if($nohp != ''){
-        $user->nohp = $nohp;
+        $user->phone_number = $nohp;
       }
       if($email != ''){
         $user->email = $email;

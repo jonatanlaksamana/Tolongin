@@ -9,7 +9,7 @@
   <h3 class="text-primary">User Profile</h3>
   <div class="row">
     <div class="col-sm-4">
-      <img src="/storage/{{$user->image}}" class="img-responsive" style="width:100%" alt="Image">
+      <img src="/images/avatar.png" class="img-responsive" style="width:100%" alt="Image">
       <p></p>
       <p class="text-primary">Ganti Photo Profile</p>
       <form action="{{route('updateFoto')}}" method="post" enctype='multipart/form-data'>
@@ -29,7 +29,7 @@
        <p class="text-primary" >Biodata</p>
         <p>Nama :  {{$user->name}}</p>
          <p>Alamat : {{$user->alamat}} </p>
-          <p>No Hp : </p>
+          <p>No Hp : {{$user->phone_number}}</p>
            <p>Email : {{$user->email}} </p>
 
       </div>
