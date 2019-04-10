@@ -69,7 +69,7 @@
                               </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <!-- USER DATA-->
                                 <div class="user-data m-b-30">
                                     <h3 class="title-3 m-b-30">
@@ -258,31 +258,7 @@
                                 </div>
                                 <!-- END USER DATA-->
                             </div>
-                            <div class="col-lg-6">
-                                <!-- TOP CAMPAIGN-->
-                                <div class="top-campaign">
-                                    <h3 class="title-3 m-b-30">top User</h3>
-                                    <div class="table-responsive">
-                                        <table class="table table-top-campaign">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Jojo</td>
-                                                    <td>Rp70,261.65</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chrissandi</td>
-                                                    <td>Rp46,399.22</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Vinson</td>
-                                                    <td>Rp35,364.90</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!--  END TOP CAMPAIGN-->
-                            </div>
+                        
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -310,8 +286,6 @@
                                             <i class="zmdi zmdi-filter-list"></i>filters</button>
                                     </div>
                                     <div class="table-data__tool-right">
-                                        <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                            <i class="zmdi zmdi-plus"></i>add item</button>
                                         <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                             <select class="js-select2" name="type">
                                                 <option selected="selected">Export</option>
@@ -322,100 +296,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive table-responsive-data2">
-                                    <table class="table table-data2">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </th>
-                                                <th>name</th>
-                                                <th>email</th>
-                                                <th>description</th>
-                                                <th>date</th>
-                                                <th>status</th>
-                                                <th>price</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="tr-shadow">
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
-                                                <td>Jojo</td>
-                                                <td>
-                                                    <span class="block-email">jojo@example.com</span>
-                                                </td>
-                                                <td class="desc">Pijat ++</td>
-                                                <td>2018-09-27 02:12</td>
-                                                <td>
-                                                    <span class="status--process">Paid</span>
-                                                </td>
-                                                <td>Rp 10.000</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="spacer"></tr>
-                                            <tr class="tr-shadow">
-                                                <td>
-                                                    <label class="au-checkbox">
-                                                        <input type="checkbox">
-                                                        <span class="au-checkmark"></span>
-                                                    </label>
-                                                </td>
-                                                <td>Chrissandi</td>
-                                                <td>
-                                                    <span class="block-email">Chris@example.com</span>
-                                                </td>
-                                                <td class="desc">Les matematika</td>
-                                                <td>2018-09-25 19:03</td>
-                                                <td>
-                                                    <span class="status--denied">Not Paid</span>
-                                                </td>
-                                                <td>Rp 10.000</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                            <i class="zmdi zmdi-mail-send"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                                            <i class="zmdi zmdi-more"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- END DATA TABLE -->
+                              
                             </div>
                         </div>
                         <div class="row m-t-30">
