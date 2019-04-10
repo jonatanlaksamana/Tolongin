@@ -15,16 +15,19 @@ class OrdaerTableSeeder extends Seeder
         DB::table('orders')->insert([
             'idClient' => 1,
             'idJasa' => 1,
+            'status' => 0,
         ]);
      
         DB::table('orders')->insert([
             'idClient' => 1,
             'idJasa' => 1,
+            'status' => 0,
         ]);
 
         DB::table('orders')->insert([
             'idClient' => 5,
             'idJasa' => 2,
+            'status' => 0,
         ]);
     }
 }
