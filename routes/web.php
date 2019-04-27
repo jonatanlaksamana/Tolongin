@@ -25,7 +25,6 @@ Route::get('/userprofile/{id}','UserController@profile')->name('profile');
 Route::post('/update','UserController@update')->name('update');
 Route::post('/updateFoto','UserController@updateFoto')->name('updateFoto');
 Route::get('/testimoni' , 'UserController@testimoni')->name('testimoni');
-Route::get('/cart','indexcontroller@kategori')->name('kategori');
 Route::post('/updatetestimoni' , 'UserController@updatetestimoni')->name('update.testi');
 Route::get('/admin/testimoni' , 'AdminController@testimoni')->name('admin.testimoni');
 Route::get('/jasa','UserController@jasa')->name('jasa');
@@ -53,3 +52,4 @@ Route::post('/addTransaksi','Usercontroller@addTransaksi2')->name('addTransaksi'
 
 Route::post('/addJasa','JasaController@insertJasa')->name('addJasa');
 Route::post('/admin/delete/testimoni/{id}' , 'AdminController@deletetestimoni')->name('delete.testimoni');
+Route::post('/addcart/{id}' , 'cartcontroller@add')->name('add.cart');
