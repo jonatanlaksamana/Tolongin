@@ -97,7 +97,7 @@ class JasaController extends Controller
     public function insertJasa(){
         $jasa = new jasa();
         $jasa->user_id = Auth::id();
-        $jasa->jasaName = request('name');
+        $jasa->jasaName = request('jasaName');
         $jasa->harga = request('harga');
         $jasa->category_id = 1;
         $status = Request::hasFile('gantifoto');

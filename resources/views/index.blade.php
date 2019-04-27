@@ -99,7 +99,7 @@
 				@foreach($jasas as $jasa)
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/produk5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('storage/' . $jasa->image)}}" alt="Colorlib Template">
     						
     						<div class="overlay"></div>
     					</a>

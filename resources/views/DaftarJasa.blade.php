@@ -28,7 +28,7 @@
             <input
               class="input100"
               type="text"
-              name="vinson"
+              name="jasaName"
               placeholder="Masukan nama jasamu!"
             />
             <span class="focus-input100"></span>
