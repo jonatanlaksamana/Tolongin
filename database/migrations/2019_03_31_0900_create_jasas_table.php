@@ -19,6 +19,8 @@ class CreateJasasTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('jasaName');
             $table->double('harga');
+            $table->string('image');
+            $table->string('deskripsi')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
