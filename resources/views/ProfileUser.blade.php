@@ -25,6 +25,7 @@ a {
 
 
 </style>
+<div class="nabrak2"></div>
 <div class="hero-wrap hero-bread" style="background-image: url('images/profile.png');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -56,34 +57,29 @@ a {
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nama Jasa</th>
+      <th scope="col">User Penyedia Jasa</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Sewa Mobil</td>
+      <td>Alwan</td>
+      <td>Unpaid</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>Sewa Tuyul</td>
+      <td>Paceli</td>
+      <td>On process</td>
     </tr>
   </tbody>
 </table>
 
 </div>
+
 <div class="lebar">
        <h1>Daftar Jasa</h1>
        <div class="product-grid4">

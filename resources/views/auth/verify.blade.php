@@ -26,7 +26,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin-top:450px;
+  margin-top:550px;
 margin-left:700px;
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -41,7 +41,7 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin-top:450px;
+  margin-top:550px;
 margin-left:200px;
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
