@@ -124,7 +124,8 @@ class UserController extends Controller
         ->where('idClient', $idUserLogin)
         ->get();
 
-  return view ('/ProfileUser' , compact('idUserLogin' , 'user' , 'order'));
+    $jasa = jasa::where('user_id', $idUserLogin)->get();
+  return view ('/ProfileUser' , compact('idUserLogin' , 'user' , 'order' , 'jasa'));
 }
   public function productzoom(){
       $idUserLogin = Auth::id();

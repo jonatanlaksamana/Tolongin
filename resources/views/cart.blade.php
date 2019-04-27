@@ -62,10 +62,14 @@
     			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ">
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
+    					<p class="d-flex">
+    						<span>Tax</span>
+    						<span>Rp 10.000</span>
+    					</p>
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>Rp {{$total}}</span>
+    						<span>{{$total  + 10000 }}</span>
     					</p>
     				</div>
     				<p class="text-center"><a href="{{ route('checkout') }}"class="buttoncheckout">Proceed to Checkout</a></p>
