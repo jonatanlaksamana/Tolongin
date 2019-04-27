@@ -26,24 +26,20 @@
         </div>
     	</div>
     </section>
-    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
-			<div class="container">
-				<div class="row">
-                
-  <div class="column">
-  <!-- <img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
-    						 -->
-  </div>
-  <div class="column">
-  <h2 class="text-lg-center font-weight-light ">We Believe In</h2>
-  <h1 class="text-xl-center font-weight-bold">Action. Community. Quality.</h1>
-  <h2 class="text-lg-center font-weight-light">
-At Fiverr, it’s our mission to grow and cultivate the world’s largest digital marketplace, a place where people can find and purchase any service they need, and build any business they dream. As an employee, your work is inspired by the success of our users and the celebration of your own personal growth. Join us.</h2>
-  </div>
- 
-
+    <div class="nabrak2"></div>
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/aboutuss.png);">
+    	<div class="container">
+    		<div class="row justify-content-center py-5">
+    			<div class="col-md-10">
+		    		<div class="row">
+		        
+						<button id="aboutbutton"type="button" visibility="hidden">Join Us</button>
+		       
+		        
+		        </div>
+	        </div>
         </div>
-      </div>
+    	</div>
     </section>
 
     @endsection

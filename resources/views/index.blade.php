@@ -9,6 +9,7 @@
       <img class="d-block w-100" src="/images/banner.png" alt="First slide">
     </div>
     <div class="carousel-item">
+
       <img class="d-block w-100" src="/images/banner2.png"  alt="Second slide">
     </div>
     <div class="carousel-item">
