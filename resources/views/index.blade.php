@@ -6,13 +6,14 @@
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="images/banner.png" alt="First slide">
+      <img class="d-block w-100" src="/images/banner.png" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/banner2.png"  alt="Second slide">
+
+      <img class="d-block w-100" src="/images/banner2.png"  alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/banner3.png"  alt="Third slide">
+      <img class="d-block w-100" src="/images/banner3.png"  alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -94,17 +95,19 @@
     	</div>
     	<div class="container">
     		<div class="row">
+
+				@foreach($jasas as $jasa)
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/produk5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('storage/' . $jasa->image)}}" alt="Colorlib Template">
     						
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">Minimalist Logo</a></h3>
+    						<h3><a href="#">{{$jasa->jasaName}}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price">Vinson Tandra</p>
+		    						<p class="price">{{$jasa->harga}}</p>
 		    					</div>
 		    				
 	    					</div>
@@ -112,59 +115,8 @@
     					</div>
     				</div>
     			</div>
-					<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/produk6.jpg" alt="Colorlib Template">
-    						
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Minimalist Logo</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price">Vinson Tandra</p>
-		    					</div>
-		    				
-	    					</div>
-	    				
-    					</div>
-    				</div>
-    			</div>
-					<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/produk7.png" alt="Colorlib Template">
-    						
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Minimalist Logo</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price">Vinson Tandra</p>
-		    					</div>
-		    				
-	    					</div>
-	    				
-    					</div>
-    				</div>
-    			</div>
-					<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/produk8.jpg" alt="Colorlib Template">
-    						
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Minimalist Logo</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price">Vinson Tandra</p>
-		    					</div>
-		    				
-	    					</div>
-	    				
-    					</div>
-    				</div>
+				@endforeach
+
     			</div>
     				
     			</div>

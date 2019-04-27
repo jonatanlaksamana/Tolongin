@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\testimoni;
+use App\testimonis;
 use Illuminate\Http\Request;
 
 class TestimoniController extends Controller

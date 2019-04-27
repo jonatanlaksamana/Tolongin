@@ -28,10 +28,13 @@
     </section>
 <div class="container-contact100 " background-color="#f8f7ed">
       <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
 
-          <h5>
-           Daftarkan jasa mu!
+
+        <form class="contact100-form validate-form" action="{{route('addJasa')}}" method="post"enctype='multipart/form-data'>
+        @csrf
+          <span class="contact100-form-title">
+
+          <h5>  Daftarkan jasa mu!
 </h5>
 
           <div
@@ -41,7 +44,7 @@
             <input
               class="input100"
               type="text"
-              name="vinson"
+              name="jasaName"
               placeholder="Masukan nama jasamu!"
             />
             <span class="focus-input100"></span>
@@ -54,8 +57,8 @@
             <input
               class="input100"
               type="text"
-              name="email"
-              placeholder="E-mail"
+              name="harga"
+              placeholder="Harga"
             />
             <span class="focus-input100"></span>
           </div>
@@ -64,11 +67,8 @@
             class="wrap-input100 validate-input"
             data-validate="Upload image"
           >
-          <form action="{{route('updateFoto')}}" method="post" enctype='multipart/form-data'>
-     
-            <input placeholder="Ganti Profile" type="file" name="gantifoto" accept="image/*">
-          
-      </form>
+          <input placeholder="Ganti Profile" type="file" name="gantifoto" accept="image/*">
+         
             <span class="focus-input100"></span>
           </div>
 
@@ -83,6 +83,7 @@
             ></textarea>
             <span class="focus-input100"></span>
           </div>
+
 
           <div class="container-contact100-form-btn">
             <button class="contact100-form-btn">

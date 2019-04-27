@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\jasa;
-use Illuminate\Http\Request;
+use Request;
 use DB;
 use Auth;
+use File;
 
 class JasaController extends Controller
 {
@@ -16,7 +18,14 @@ class JasaController extends Controller
      */
     public function index()
     {
-        //
+        $Jasa=Jasas::all();
+
+        $jasa1 = DB::table('jasas')
+            ->join('categories', 'id', '=', 'jasas.category.id')
+            ->get();
+
+        $jasas = DB::table('jasas')->Orderby('id', 'asc')->limit(4)->get();
+        return view('index', compact('Jasa','jasa1', 'users'));
     }
 
     /**
@@ -86,6 +95,19 @@ class JasaController extends Controller
     }
 
     public function insertJasa(){
-
+        $jasa = new jasa();
+        $jasa->user_id = Auth::id();
+        $jasa->jasaName = request('jasaName');
+        $jasa->harga = request('harga');
+        $jasa->category_id = 1;
+        $status = Request::hasFile('gantifoto');
+        $image = request('gantifoto');
+        $dest =  storage_path('/app/public');
+        File::delete($dest. "/" . $jasa->image ."");
+        $jasa->image =  time().".".$image->extension();
+        $image->move($dest,$jasa->image);
+        $jasa->deskripsi = request('message');
+        $jasa->save();
+        return redirect()->route('home');
     }
 }
