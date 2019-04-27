@@ -111,6 +111,12 @@ class UserController extends Controller
       $user = User::find($idUserLogin);
     return view ('/product' , compact('idUserLogin' , 'user'));
   }
+
+  public function ProfileUser(){
+    $idUserLogin = Auth::id();
+    $user = User::find($idUserLogin);
+  return view ('/ProfileUser' , compact('idUserLogin' , 'user'));
+}
   public function productzoom(){
       $idUserLogin = Auth::id();
       $user = User::find($idUserLogin);

@@ -11,14 +11,28 @@
         </div>
       </div>
     </div>
-
-<div class="container-contact100">
+   
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/daftar.png);">
+    	<div class="container">
+    		<div class="row justify-content-center py-5">
+    			<div class="col-md-10">
+		    		<div class="row">
+		        
+						<button id="aboutbutton"type="button" visibility="hidden">Join Us</button>
+		       
+		        
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+<div class="container-contact100 " background-color="#f8f7ed">
       <div class="wrap-contact100">
         <form class="contact100-form validate-form">
 
-          <span class="contact100-form-title">
+          <h5>
            Daftarkan jasa mu!
-          </span>
+</h5>
 
           <div
             class="wrap-input100 validate-input"

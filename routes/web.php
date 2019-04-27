@@ -41,6 +41,7 @@ Route::get('/snap', 'SnapController@snap');
 Route::get('/snaptoken', 'SnapController@token');
 Route::post('/snapfinish', 'SnapController@finish');
 Route::get('/checkout','UserController@checkout')->name('checkout');
+Route::get('/ProfileUser','UserController@profileuser')->name('profileuser');
 Route::get('/about','UserController@aboutus')->name('about');
 Route::get('/contact','UserController@contact')->name('contact');
 Route::get('/DaftarJasa','UserController@daftarjasa')->name('daftarjasa');
