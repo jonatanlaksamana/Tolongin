@@ -25,9 +25,11 @@
                                     <td>{{$testi->isi}}</td>
                                     <td>{{$testi->created_at}}</td>
                                     <td>
+                                        <form method="post" action="{{url('/admin/delete/testimoni/' . $testi->id)}}">
+                                            @csrf
+                                            <input  type="submit" class="btn btn-danger  btn-sm"  value="delete">
+                                        </form>
 
-                                            <input class="btn btn-danger  btn-sm"  value="delete">
-                                            <input class="btn btn-secondary btn-sm" value="edit">
 
 
                                     </td>
