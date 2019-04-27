@@ -1,9 +1,10 @@
 @extends('layouts/app')
 
 @section('content')
-
-
-
+< <script type="text/javascript"
+            src="https://app.sandbox.midtrans.com/snap/snap.js"
+            data-client-key="SB-Mid-client-XRt4tcImqIkvp98P"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <div class="hero-wrap hero-bread" style="background-image: url('images/checkout.png');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -50,7 +51,8 @@
 		                  </select>
 		                </div>
 		            	</div>
-		            </div>
+								</div>
+								
 		            <div class="w-100"></div>
 		            <div class="col-md-6">
 		            	<div class="form-group">
@@ -128,41 +130,136 @@
 	          	</div>
 	          	<div class="col-md-6">
 	          		<div class="cart-detail bg-light p-3 p-md-4">
-	          			<h3 class="billing-heading mb-4">Payment Method</h3>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Direct Bank Tranfer</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Check Payment</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio" class="mr-2"> Paypal</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="checkbox">
-											   <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-											</div>
-										</div>
-									</div>
-									<p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>
-								</div>
-	          	</div>
-	          </div>
-          </div> <!-- .col-md-8 -->
-        </div>
+									  
+    <form id="payment-form" method="post" action="snapfinish">
+      <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+      <input type="hidden" name="result_type" id="result-type" value=""></div>
+      <input type="hidden" name="result_data" id="result-data" value=""></div>
+    </form>
+    
+    <button id="pay-button">Pay!</button>
+</div>
       </div>
 	</section> <!-- .section -->
+
+	<!-- Javascript for token generation -->
+	<script type="text/javascript">
+	$(function(){
+		// Sandbox URL
+		Veritrans.url = "https://api.sandbox.veritrans.co.id/v2/token";
+		// TODO: Change with your client key.
+		Veritrans.client_key = "SB-Mid-client-XRt4tcImqIkvp98P";
+		//Veritrans.client_key = "VT-client-h7ubdjqpcsLAQnjY";
+		
+		//Veritrans.client_key = "d4b273bc-201c-42ae-8a35-c9bf48c1152b";
+		var card = function(){
+			return { 	'card_number'		: $(".card-number").val(),
+						'card_exp_month'	: $(".card-expiry-month").val(),
+						'card_exp_year'		: $(".card-expiry-year").val(),
+						'card_cvv'			: $(".card-cvv").val(),
+						'secure'			: false,
+						'bank'				: 'bni',
+						'gross_amount'		: 10000
+						 }
+		};
+
+		function callback(response) {
+			if (response.redirect_url) {
+				// 3dsecure transaction, please open this popup
+				openDialog(response.redirect_url);
+
+			} else if (response.status_code == '200') {
+				// success 3d secure or success normal
+				closeDialog();
+				// submit form
+				$(".submit-button").attr("disabled", "disabled"); 
+				$("#token_id").val(response.token_id);
+				$("#payment-form").submit();
+			} else {
+				// failed request token
+				console.log('Close Dialog - failed');
+				//closeDialog();
+				//$('#purchase').removeAttr('disabled');
+				// $('#message').show(FADE_DELAY);
+				// $('#message').text(response.status_message);
+				//alert(response.status_message);
+			}
+		}
+
+		function openDialog(url) {
+			$.fancybox.open({
+		        href: url,
+		        type: 'iframe',
+		        autoSize: false,
+		        width: 700,
+		        height: 500,
+		        closeBtn: false,
+		        modal: true
+		    });
+		}
+
+		function closeDialog() {
+			$.fancybox.close();
+		}
+
+		$('.submit-button').click(function(event){
+			event.preventDefault();
+			//$(this).attr("disabled", "disabled"); 
+			Veritrans.token(card, callback);
+			return false;
+		});
+	});
+
+	</script>
+	<script type="text/javascript">
+  
+	$('#pay-button').click(function (event) {
+		event.preventDefault();
+		$(this).attr("disabled", "disabled");
+	
+	$.ajax({
+		
+		url: './snaptoken',
+		cache: false,
+
+		success: function(data) {
+			//location = data;
+
+			console.log('token = '+data);
+			
+			var resultType = document.getElementById('result-type');
+			var resultData = document.getElementById('result-data');
+
+			function changeResult(type,data){
+				$("#result-type").val(type);
+				$("#result-data").val(JSON.stringify(data));
+				//resultType.innerHTML = type;
+				//resultData.innerHTML = JSON.stringify(data);
+			}
+
+			snap.pay(data, {
+				
+				onSuccess: function(result){
+					changeResult('success', result);
+					console.log(result.status_message);
+					console.log(result);
+					$("#payment-form").submit();
+				},
+				onPending: function(result){
+					changeResult('pending', result);
+					console.log(result.status_message);
+					$("#payment-form").submit();
+				},
+				onError: function(result){
+					changeResult('error', result);
+					console.log(result.status_message);
+					$("#payment-form").submit();
+				}
+			});
+		}
+	});
+});
+
+</script>
+
 	@endsection

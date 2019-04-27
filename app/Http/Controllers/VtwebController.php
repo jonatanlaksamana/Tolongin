@@ -1,30 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Veritrans\Veritrans;
 
+use App\Veritrans\Veritrans;
 
 class VtwebController extends Controller
 {
-    //
     public function __construct()
     {   
-        Veritrans::$serverKey = 'SB-Mid-server-8gxP9I8OPoWiGw0NJg2R3bdR';
+        Veritrans::$serverKey = '<your server key>';
+
         //set Veritrans::$isProduction  value to true for production mode
         Veritrans::$isProduction = false;
     }
+
     public function vtweb() 
     {
         $vt = new Veritrans;
+
         $transaction_details = array(
             'order_id'          => uniqid(),
             'gross_amount'  => 200000
         );
+
         // Populate items
         $items = [
             array(
@@ -40,6 +41,7 @@ class VtwebController extends Controller
                 'name'          => 'Nike N90'
             )
         ];
+
         // Populate customer's billing address
         $billing_address = array(
             'first_name'        => "Andri",
@@ -50,6 +52,7 @@ class VtwebController extends Controller
             'phone'                 => "081322311801",
             'country_code'  => 'IDN'
             );
+
         // Populate customer's shipping address
         $shipping_address = array(
             'first_name'    => "John",
@@ -60,6 +63,7 @@ class VtwebController extends Controller
             'phone'             => "081322311801",
             'country_code'=> 'IDN'
             );
+
         // Populate customer's Info
         $customer_details = array(
             'first_name'            => "Andri",
@@ -69,6 +73,7 @@ class VtwebController extends Controller
             'billing_address' => $billing_address,
             'shipping_address'=> $shipping_address
             );
+
         // Data yang akan dikirim untuk request redirect_url.
         // Uncomment 'credit_card_3d_secure' => true jika transaksi ingin diproses dengan 3DSecure.
         $transaction_data = array(
@@ -92,21 +97,26 @@ class VtwebController extends Controller
             return $e->getMessage;
         }
     }
+
     public function notification()
     {
         $vt = new Veritrans;
         echo 'test notification handler';
         $json_result = file_get_contents('php://input');
         $result = json_decode($json_result);
+
         if($result){
         $notif = $vt->status($result->order_id);
         }
+
         error_log(print_r($result,TRUE));
+
         /*
         $transaction = $notif->transaction_status;
         $type = $notif->payment_type;
         $order_id = $notif->order_id;
         $fraud = $notif->fraud_status;
+
         if ($transaction == 'capture') {
           // For credit card transaction, we need to check whether transaction is challenge by FDS or not
           if ($type == 'credit_card'){
@@ -135,4 +145,4 @@ class VtwebController extends Controller
         }*/
    
     }
-}
+}    

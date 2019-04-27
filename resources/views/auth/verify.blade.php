@@ -17,6 +17,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.button3 {
+  background-color: pink;/* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-top:550px;
+margin-left:50px;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
 .button4 {
   background-color: pink;/* Green */
   border: none;
@@ -54,6 +68,7 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                             {{ __('A fresh verification link has been sent to your email address!') }}
 </a>
                     @endif
- <a class="button4"href="{{ route('verification.resend') }}">Resend</a>.
+ <a class="button4"href="{{route('home')}}" >Go!</a>.
+ <a class="button3"href="{{ route('verification.resend') }}">Resend</a>.
 </div>
 

@@ -1,14 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Veritrans\Midtrans;
-
-
 class SnapController extends Controller
 {
     public function __construct()
@@ -155,4 +150,4 @@ class SnapController extends Controller
         }*/
    
     }
-}
+}    

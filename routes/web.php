@@ -40,6 +40,7 @@ Route::get('/snap', 'SnapController@snap');
 Route::get('/snaptoken', 'SnapController@token');
 Route::post('/snapfinish', 'SnapController@finish');
 Route::get('/checkout','UserController@checkout')->name('checkout');
+Route::get('/ProPage','UserController@propage')->name('propage');
 Route::get('/ProfileUser','UserController@profileuser')->name('profileuser');
 Route::get('/about','UserController@aboutus')->name('about');
 Route::get('/contact','UserController@contact')->name('contact');
@@ -49,7 +50,7 @@ Route::get('/productzoom','UserController@productzoom')->name('productzoom');
 Route::get('/cart','UserController@cart')->name('cart');
 Route::post('/addcart','cartcontroller@store')->name('add.cart');
 Route::post('/addTransaksi','Usercontroller@addTransaksi2')->name('addTransaksi');
-
+Route::post('/vt_notif', 'VtwebController@notification');
 Route::post('/addJasa','JasaController@insertJasa')->name('addJasa');
 Route::post('/admin/delete/testimoni/{id}' , 'AdminController@deletetestimoni')->name('delete.testimoni');
 Route::post('/addcart/{id}' , 'cartcontroller@add')->name('add.cart');

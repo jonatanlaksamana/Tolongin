@@ -13,6 +13,14 @@ class JasaTableSeeder extends Seeder
     {
         //
         DB::table('jasas')->insert([
+            'user_id' => 1,
+             'category_id' => 1,
+             'jasaName' => 'Premium Member',
+             'harga' => 200000,
+             'image' => '/images/premium.jpg',
+             'deskripsi' => ''
+         ]);
+        DB::table('jasas')->insert([
            'user_id' => 1,
             'category_id' => 1,
             'jasaName' => 'code php',

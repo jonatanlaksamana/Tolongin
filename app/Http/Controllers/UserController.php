@@ -13,9 +13,11 @@ use DB;
 use App\testimoni;
 use File;
 
+
 class UserController extends Controller
 {
     //
+   
     public function profile(){
 
       $category=category::all();
@@ -132,6 +134,11 @@ class UserController extends Controller
       $user = User::find($idUserLogin);
     return view ('/productzoom' , compact('idUserLogin' , 'user'));
   }
+  public function propage(){
+    $idUserLogin = Auth::id();
+    $user = User::find($idUserLogin);
+  return view ('/ProPage' , compact('idUserLogin' , 'user'));
+}
   public function daftarjasa(){
       $idUserLogin = Auth::id();
       $user = User::find($idUserLogin);
