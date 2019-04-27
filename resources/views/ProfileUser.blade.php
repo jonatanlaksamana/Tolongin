@@ -60,7 +60,7 @@ a {
 
 
 
-      <th scope="col">Penyedia Jasa</th>
+      <th scope="col">Nama User</th>
       <th scope="col">Nama Jasa</th>
       <th scope="col">Harga</th>
         <th>Status</th>

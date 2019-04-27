@@ -121,8 +121,8 @@ class UserController extends Controller
     $idUserLogin = Auth::id();
     $user = User::find($idUserLogin);
     $order =  DB::table('orders')
-        ->join('users', 'users.id', '=', 'orders.idClient')
         ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
+        ->join('users', 'users.id', '=', 'orders.idClient')
         ->where('idClient', $idUserLogin)
         ->get();
 
