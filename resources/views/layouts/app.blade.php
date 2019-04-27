@@ -87,12 +87,14 @@
 
      <!-- Authentication Links -->
      @auth
-               
+
                @if($user->member == "admin")
                    <li class="nav-item  h1 fontlara"><a href="{{URL::to('userprofile/' . $idUserLogin)}}" >Profile</a></li>
                    <li class="nav-item h1 fontlara"><a href="{{route('admin.panel')}}" class="nav-link h1">Admin</a></li>
                @endif
-           @endauth
+
+                @endauth
+
      @guest
      <div class="space"></div>
                         <li class="nav-item">
