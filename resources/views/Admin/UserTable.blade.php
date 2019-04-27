@@ -11,32 +11,26 @@
                         <div class="row">
 
                               <div class="col-lg-12">
-                                  <h2 class="title-1 m-b-25">Jasa yang dipakai</h2>
+                                  <h2 class="title-1 m-b-25">Users</h2>
                                   <div class="table-responsive table--no-card m-b-40">
                                       <table class="table table-borderless table-striped table-earning">
                                           <thead>
                                               <tr>
-                                                  <th>order ID</th>
-                                                  <th>Nama jasa</th>
-                                                  <th>Penyedia Jasa</th>
-                                                  <th>price</th>
+                                                  <th> id</th>
+                                                  <th>Name</th>
+                                                  <th>Email</th>
+                                                  <th>Member</th>
                                                   <th>Action</th>
                                               </tr>
                                           </thead>
                                           <tbody>
-                                            @foreach($orders as $order)
+                                            @foreach($users as $user)
                                                 <tr>
-                                                    <td>{{$order->id}}</td>
-                                                    <td>{{$order->jasaName}}</td>
-                                                    <th>{{$order->name}}</th>
-                                                    <td>{{$order->harga}}</td>
-                                                    <td>
-                                                        <form  method="post" action="{{url('/delete/order/' . $order->id . '')}}">
-                                                            @csrf
-                                                            <button class="btn btn-danger btn-sm">Delete</button>
-                                                        </form>
-
-                                                    </td>
+                                                    <td>{{$user->id}}</td>
+                                                    <td>{{$user->name}}</td>
+                                                    <th>{{$user->email}}</th>
+                                                    <td>{{$user->member}}</td>
+                                                    <td><button class="btn btn-success bnt-sm">Change Privilage</button></td>
                                                 </tr>
                                             @endforeach
                                           </tbody>

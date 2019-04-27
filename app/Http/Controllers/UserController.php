@@ -63,8 +63,10 @@ class UserController extends Controller
   }
 
     public function testimoni(){
-  
-        return view('user.testimoni');
+
+        $idUserLogin = Auth::id();
+        $user = User::find($idUserLogin);
+        return view('user.testimoni' , compact('idUserLogin' , 'user'));
     
         
     }
@@ -79,28 +81,40 @@ class UserController extends Controller
     }
 
     public function jasa(){
-  
-      return view('/jasa');
+
+        $idUserLogin = Auth::id();
+        $user = User::find($idUserLogin);
+      return view('/jasa' , compact('idUserLogin' , 'user'));
   
       
   }
   
   public function checkout(){
 
-    return view('/checkout');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view('/checkout' , compact('idUserLogin','user'));
   }
 
   public function aboutus(){
-    return view ('/about');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view ('/about' , compact('idUserLogin' ,'user'));
   }
   public function contact(){
-    return view ('/contact');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view ('/contact' , compact('idUserLogin' , 'user'));
   }
   public function product(){
-    return view ('/product');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view ('/product' , compact('idUserLogin' , 'user'));
   }
   public function productzoom(){
-    return view ('/productzoom');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view ('/productzoom' , compact('idUserLogin' , 'user'));
   }
   public function daftarjasa(){
     return view ('/DaftarJasa');
@@ -110,7 +124,9 @@ class UserController extends Controller
     $cartCollection = \Cart::getContent();
     $subTotal = \Cart::getSubTotal();
     $cartTotalQuantity = \Cart::getTotalQuantity();
-    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity'));
+    $idUserLogin = Auth::id();
+    $user = User::find($idUserLogin);
+    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin'));
         }
 
     public function cek(){
@@ -118,7 +134,9 @@ class UserController extends Controller
     $cartCollection = \Cart::getContent();
     $subTotall = \Cart::getSubTotal();
     $cartTotalQuantity = \Cart::getTotalQuantity();
-    return view('checkout',compact('cartCollection','subTotall','cartTotalQuantity'));
+        $idUserLogin = Auth::id();
+        $user = User::find($idUserLogin);
+    return view('checkout',compact('cartCollection','subTotall','cartTotalQuantity' , 'idUserLogin' ,'user'));
   }
   public function addTransaksi2(){
     $area= new transaksi;

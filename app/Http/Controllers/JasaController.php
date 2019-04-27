@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\jasa;
 use Illuminate\Http\Request;
+use DB;
+use Auth;
 
 class JasaController extends Controller
 {
@@ -81,5 +83,9 @@ class JasaController extends Controller
     public function destroy(jasa $jasa)
     {
         //
+    }
+
+    public function insertJasa(){
+
     }
 }
