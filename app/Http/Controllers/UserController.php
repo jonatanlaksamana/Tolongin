@@ -136,7 +136,8 @@ class UserController extends Controller
     $cartTotalQuantity = \Cart::getTotalQuantity();
     $idUserLogin = Auth::id();
     $user = User::find($idUserLogin);
-    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin'));
+      $cart = \Cart::getContent();
+    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin' , 'cart'));
         }
 
     public function cek(){

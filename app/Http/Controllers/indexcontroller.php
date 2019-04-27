@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use App\category;
 use Auth;
@@ -41,6 +42,7 @@ class indexcontroller extends Controller
             ->join('users', function ($join) {
                 $join->on('users.id', '=', 'testimonis.idClient');
             })->get();
-        return view('cart',compact ('category', 'idUserLogin', 'testimonis' ,'user'));
+        $cart = Cart::getContent();
+        return view('cart',compact ('category', 'idUserLogin', 'testimonis' ,'user' , 'cart'));
     }
 }
