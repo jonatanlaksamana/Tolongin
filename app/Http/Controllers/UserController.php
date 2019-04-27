@@ -117,7 +117,9 @@ class UserController extends Controller
     return view ('/productzoom' , compact('idUserLogin' , 'user'));
   }
   public function daftarjasa(){
-    return view ('/DaftarJasa');
+      $idUserLogin = Auth::id();
+      $user = User::find($idUserLogin);
+    return view ('/DaftarJasa' , compact('idUserLogin' , 'user'));
   }
   
   public function cart(){
