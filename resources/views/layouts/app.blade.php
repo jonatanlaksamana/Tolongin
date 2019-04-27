@@ -90,6 +90,10 @@ padding-top: 0px;
   margin: 4px 2px;
   cursor: pointer;
 }
+.lebar{
+  width:500px;
+  margin-left:200px;
+}
   </style>
 
   </head>
