@@ -1,24 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 use App\Veritrans\Veritrans;
 
 class TransactionController extends Controller
 {
     public function __construct()
     {   
-        Veritrans::$serverKey = 'SB-Mid-server-8gxP9I8OPoWiGw0NJg2R3bdR';
+        Veritrans::$serverKey = '<your server key>';
         Veritrans::$isProduction = false;
     }
+
     public function transaction() 
     {
         return view('transaction'); 
     }
+
     public function transaction_process(Request $request)
     {
         $vt = new Veritrans;
@@ -39,24 +40,28 @@ class TransactionController extends Controller
                 break;
         } 
     }
+
     public function status($order_id)
     {
         $vt = new Veritrans;
         echo 'test get status </br>';
         print_r ($vt->status($order_id) );
     }
+
     public function cancel($order_id)
     {
         $vt = new Veritrans;
         echo 'test cancel trx </br>';
         echo $vt->cancel($order_id);
     }
+
     public function approve($order_id)
     {
         $vt = new Veritrans;
         echo 'test get approve </br>';
         print_r ($vt->approve($order_id) );
     }
+
     public function expire($order_id)
     {
         $vt = new Veritrans;
@@ -64,4 +69,5 @@ class TransactionController extends Controller
         print_r ($vt->expire($order_id) );
     }
 
-}
+
+}    

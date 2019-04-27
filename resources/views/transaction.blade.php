@@ -1,7 +1,4 @@
-
-  @extends('layouts/app')
-
-@section('content')
+<html>
 <head>
 	<title>Checkout</title>
 </head>
@@ -24,4 +21,4 @@
 			<button class="submit-button" type="submit">Submit Payment</button>
 	</form>
 </body>
-@endsection
+</html>

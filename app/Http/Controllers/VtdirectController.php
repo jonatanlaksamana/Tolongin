@@ -1,34 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 use App\Veritrans\Veritrans;
 
 class VtdirectController extends Controller
 {
-    //
-
     public function __construct()
     {   
-        Veritrans::$serverKey = 'SB-Mid-server-8gxP9I8OPoWiGw0NJg2R3bdR';
+        Veritrans::$serverKey = '<your server key>';
         Veritrans::$isProduction = false;
     }
+
     public function vtdirect() 
     {
         return view('checkout'); 
     }
+
     public function checkout_process(Request $request)
     {
         $token = $request->input('token_id');
         $vt = new Veritrans;
+
         $transaction_details = array(
             'order_id'          => uniqid(),
             'gross_amount'  => 10000
         );
+
         // Populate items
         $items = [
             array(
@@ -44,6 +45,7 @@ class VtdirectController extends Controller
                 'name'          => 'Nike N90'
             )
         ];
+
         // Populate customer's billing address
         $billing_address = array(
             'first_name'        => "Andri",
@@ -54,6 +56,7 @@ class VtdirectController extends Controller
             'phone'                 => "081322311801",
             'country_code'  => 'IDN'
             );
+
         // Populate customer's shipping address
         $shipping_address = array(
             'first_name'    => "John",
@@ -64,6 +67,7 @@ class VtdirectController extends Controller
             'phone'             => "081322311801",
             'country_code'=> 'IDN'
             );
+
         // Populate customer's Info
         $customer_details = array(
             'first_name'            => "Andri",
@@ -73,6 +77,7 @@ class VtdirectController extends Controller
             'billing_address' => $billing_address,
             'shipping_address'=> $shipping_address
             );
+
         $transaction_data = array(
             'payment_type'      => 'credit_card', 
             'credit_card'       => array(
@@ -82,6 +87,7 @@ class VtdirectController extends Controller
             'transaction_details'   => $transaction_details,
             'item_details'           => $items
         );
+
         
         $response = null;
         try
@@ -92,6 +98,7 @@ class VtdirectController extends Controller
         {
             return $e->getMessage; 
         }
+
         //var_dump($response);
         if($response)
         {
@@ -100,6 +107,7 @@ class VtdirectController extends Controller
                 //success
                 echo "Transaksi berhasil. <br />";
                 echo "Status transaksi untuk order id ".$response->order_id.": ".$response->transaction_status;
+
                 echo "<h3>Detail transaksi:</h3>";
                 var_dump($response);
             }
@@ -108,6 +116,7 @@ class VtdirectController extends Controller
                 //deny
                 echo "Transaksi ditolak. <br />";
                 echo "Status transaksi untuk order id ".$response->order_id.": ".$response->transaction_status;
+
                 echo "<h3>Detail transaksi:</h3>";
                 var_dump($response);
             }
@@ -116,6 +125,7 @@ class VtdirectController extends Controller
                 //challenge
                 echo "Transaksi challenge. <br />";
                 echo "Status transaksi untuk order id ".$response->order_id.": ".$response->transaction_status;
+
                 echo "<h3>Detail transaksi:</h3>";
                 var_dump($response);
             }
@@ -124,9 +134,11 @@ class VtdirectController extends Controller
                 //error
                 echo "Terjadi kesalahan pada data transaksi yang dikirim.<br />";
                 echo "Status message: [".$response->status_code."] ".$response->status_message;
+
                 echo "<h3>Response:</h3>";
                 var_dump($response);
             }   
         }
+
     }
-}
+}    

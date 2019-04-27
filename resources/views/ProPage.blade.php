@@ -1,17 +1,29 @@
 @extends('layouts/app')
 
 @section('content')
-<div class="nabrak2"></div>
-<div class="hero-wrap hero-bread" style="background-image: url('images/daftarjasa.png');">
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-            <h1 class="mb-0 bread">Contact Us</h1>
-          </div>
-        </div>
-      </div>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/images/bepro.png" alt="First slide">
     </div>
+    <div class="carousel-item">
+
+      <img class="d-block w-100" src="/images/banner2.png"  alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/images/banner3.png"  alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
    
   
 @endsection

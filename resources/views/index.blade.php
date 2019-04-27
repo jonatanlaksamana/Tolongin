@@ -130,8 +130,13 @@
     		<div class="row justify-content-center py-5">
     			<div class="col-md-10">
 		    		<div class="row">
-		        
-						<button id="probutton"type="button" class="">Try Pro</button>
+						
+						<form action="{{url('/addcart/' . 0)}}" method="post">
+                                @csrf
+																<button id="probutton"type="button" class="">Try Pro</button>
+                            </form>
+
+				
 		       
 		        
 		        </div>
