@@ -8,6 +8,7 @@ use Auth;
 use App\testimoni;
 use DB;
 use App\User;
+use App\jasa;
 use App\Veritrans\Veritrans;
 
 
@@ -26,7 +27,11 @@ class indexcontroller extends Controller
       ->join('users', function ($join) {
           $join->on('users.id', '=', 'testimonis.idClient');
       })->get();
-      return view('index' , compact('category' , 'idUserLogin', 'testimonis' , 'user'));
+
+    
+
+      $jasas = jasa::all();
+      return view('index' , compact('category' , 'idUserLogin', 'testimonis' , 'user','jasas'));
     }
     public function kategori(){
         $idUserLogin = Auth::id();

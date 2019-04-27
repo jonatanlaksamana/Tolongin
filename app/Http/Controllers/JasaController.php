@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\jasa;
+use App\jasas;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
@@ -16,7 +16,14 @@ class JasaController extends Controller
      */
     public function index()
     {
-        //
+        $Jasa=Jasas::all();
+
+        $jasa1 = DB::table('jasas')
+            ->join('categories', 'id', '=', 'jasas.category.id')
+            ->get();
+
+        $jasas = DB::table('jasas')->Orderby('id', 'asc')->limit(4)->get();
+        return view('index', compact('Jasa','jasa1', 'users'));
     }
 
     /**
