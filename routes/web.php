@@ -43,6 +43,7 @@ Route::post('/snapfinish', 'SnapController@finish');
 Route::get('/checkout','UserController@checkout')->name('checkout');
 Route::get('/about','UserController@aboutus')->name('about');
 Route::get('/contact','UserController@contact')->name('contact');
+Route::get('/DaftarJasa','UserController@daftarjasa')->name('daftarjasa');
 Route::get('/product','UserController@product')->name('product');
 Route::get('/productzoom','UserController@productzoom')->name('productzoom');
 Route::get('/cart','UserController@cart')->name('cart');

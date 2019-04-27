@@ -102,6 +102,9 @@ class UserController extends Controller
   public function productzoom(){
     return view ('/productzoom');
   }
+  public function daftarjasa(){
+    return view ('/DaftarJasa');
+  }
   
   public function cart(){
     $cartCollection = \Cart::getContent();
