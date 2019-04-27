@@ -22,22 +22,11 @@ class SnapController extends Controller
         $midtrans = new Midtrans;
         $transaction_details = array(
             'order_id'      => uniqid(),
-            'gross_amount'  => 200000
+            'gross_amount'  => \Cart::getTotal()
         );
         // Populate items
         $items = [
-            array(
-                'id'        => 'item1',
-                'price'     => 100000,
-                'quantity'  => 1,
-                'name'      => 'Adidas f50'
-            ),
-            array(
-                'id'        => 'item2',
-                'price'     => 50000,
-                'quantity'  => 2,
-                'name'      => 'Nike N90'
-            )
+    
         ];
         // Populate customer's billing address
         $billing_address = array(
