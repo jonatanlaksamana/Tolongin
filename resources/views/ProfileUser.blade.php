@@ -56,29 +56,33 @@ a {
    <table class="table table-striped">
   <thead>
     <tr>
+
+
+
+
       <th scope="col">#</th>
       <th scope="col">Nama Jasa</th>
       <th scope="col">User Penyedia Jasa</th>
       <th scope="col">Status</th>
+
     </tr>
   </thead>
   <tbody>
+  @foreach($order as $ord)
     <tr>
-      <th scope="row">1</th>
-      <td>Sewa Mobil</td>
-      <td>Alwan</td>
-      <td>Unpaid</td>
+
+      <th scope="row">{{$ord->name}}</th>
+      <td>{{$ord->jasaName}}</td>
+      <td>{{$ord->harga}}</td>
+
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Sewa Tuyul</td>
-      <td>Paceli</td>
-      <td>On process</td>
-    </tr>
+      @endforeach
+
   </tbody>
 </table>
 
 </div>
+
 
 <div class="lebar">
        <h1>Daftar Jasa</h1>
@@ -107,6 +111,7 @@ a {
             </div>
         </div>
 
+
 </div>
 
-@endsection
+

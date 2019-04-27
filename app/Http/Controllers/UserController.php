@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\jasa;
+use App\order;
 use Request;
 use App\User;
 use App\category;
@@ -117,7 +118,13 @@ class UserController extends Controller
   public function ProfileUser(){
     $idUserLogin = Auth::id();
     $user = User::find($idUserLogin);
-  return view ('/ProfileUser' , compact('idUserLogin' , 'user'));
+    $order =  DB::table('orders')
+        ->join('users', 'users.id', '=', 'orders.idClient')
+        ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
+        ->where('idClient', $idUserLogin)
+        ->get();
+
+  return view ('/ProfileUser' , compact('idUserLogin' , 'user' , 'order'));
 }
   public function productzoom(){
       $idUserLogin = Auth::id();
@@ -136,8 +143,10 @@ class UserController extends Controller
     $cartTotalQuantity = \Cart::getTotalQuantity();
     $idUserLogin = Auth::id();
     $user = User::find($idUserLogin);
-      $cart = \Cart::getContent();
-    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin' , 'cart'));
+    $cart = \Cart::getContent();
+    $total = \Cart::getTotal();
+
+    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin' , 'cart' , 'total' ));
         }
 
     public function cek(){
@@ -145,8 +154,8 @@ class UserController extends Controller
     $cartCollection = \Cart::getContent();
     $subTotall = \Cart::getSubTotal();
     $cartTotalQuantity = \Cart::getTotalQuantity();
-        $idUserLogin = Auth::id();
-        $user = User::find($idUserLogin);
+    $idUserLogin = Auth::id();
+    $user = User::find($idUserLogin);
     return view('checkout',compact('cartCollection','subTotall','cartTotalQuantity' , 'idUserLogin' ,'user'));
   }
   public function addTransaksi2(){
