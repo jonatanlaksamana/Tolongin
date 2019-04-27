@@ -84,4 +84,52 @@ class UserController extends Controller
   
       
   }
+  
+  public function checkout(){
+
+    return view('/checkout');
+  }
+
+  public function aboutus(){
+    return view ('/about');
+  }
+  public function contact(){
+    return view ('/contact');
+  }
+  public function product(){
+    return view ('/product');
+  }
+  public function productzoom(){
+    return view ('/productzoom');
+  }
+  
+  public function cart(){
+    $cartCollection = \Cart::getContent();
+    $subTotal = \Cart::getSubTotal();
+    $cartTotalQuantity = \Cart::getTotalQuantity();
+    return view('cart',compact('cartCollection','subTotal','cartTotalQuantity'));
+        }
+
+    public function cek(){
+      $idlogin = Auth::id();
+    $cartCollection = \Cart::getContent();
+    $subTotall = \Cart::getSubTotal();
+    $cartTotalQuantity = \Cart::getTotalQuantity();
+    return view('checkout',compact('cartCollection','subTotall','cartTotalQuantity'));
+  }
+  public function addTransaksi2(){
+    $area= new transaksi;
+    $idlogin = Auth::id();
+    $area -> total = \Cart::getSubTotal();
+    $area -> jumlahBarang =  \Cart::getTotalQuantity();
+    $area -> idUser = $idlogin;
+    $area -> status = 'belum bayar';
+    $area -> alamat = \request('alamat');
+    if($area -> save()){
+      return redirect()->route('bayar');
+    }
+    else{
+      echo 'fail';
+    }
+  }
 }

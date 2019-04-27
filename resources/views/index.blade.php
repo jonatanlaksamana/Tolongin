@@ -5,322 +5,429 @@
   @section('content')
 
 
-
-
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="images/promo1.png" alt="Los Angeles">
-      </div>
-
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/banner.png" alt="First slide">
     </div>
-    <!-- <div class="carousel-caption">
-             <h1 class="display-1"><font face="verdana" color="black"> <strong>Tolongin </strong></font></h1>
-             <h3 class="display-4"><font face="verdana" color="black"> <strong>Mempermudah Hidup mu!</strong> </h1>
-           </div> -->
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/banner.png"  alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/banner.png"  alt="Third slide">
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  
 
-      <section class="ftco-section ftco-product">
-      	<div class="container">
-      		<div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-            	<h1 class="big">Jasa Populer</h1>
-              <h2 class="mb-4">Jasa populer</h2>
+    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+						<a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+							<span class="icon-play"></span>
+						</a>
+					</div>
+					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section-bold mb-4 mt-md-5">
+	          	<div class="ml-md-0">
+		            <h2 class="mb-4">Why us?</h2>
+	            </div>
+	          </div>
+	          <div class="pb-md-5">
+							<p>At Tolongin, it’s our mission to grow and cultivate the world’s largest digital marketplace, a place where people can find and purchase any service they need, and build any business they dream. As an employee, your work is inspired by the success of our users and the celebration of your own personal growth. Join us.</p>
+							<div class="row ftco-services">
+			          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services">
+			              <div class="icon d-flex justify-content-center align-items-center mb-4">
+			            		<span class="flaticon-002-recommended"></span>
+			              </div>
+			              <div class="media-body">
+			                <h3 class="heading">Refund Policy</h3>
+			                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+			              </div>
+			            </div>      
+			          </div>
+			          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services">
+			              <div class="icon d-flex justify-content-center align-items-center mb-4">
+			            		<span class="flaticon-001-box"></span>
+			              </div>
+			              <div class="media-body">
+			                <h3 class="heading">We're always here for you</h3>
+			                <p>Tolongin is here for you, anything from answering any questions to resolving any issues, at any time.</p>
+			              </div>
+			            </div>    
+			          </div>
+			          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services">
+			              <div class="icon d-flex justify-content-center align-items-center mb-4">
+			            		<span class="flaticon-003-medal"></span>
+			              </div>
+			              <div class="media-body">
+			                <h3 class="heading">Superior Quality</h3>
+			                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+			              </div>
+			            </div>      
+			          </div>
+			        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Get Inspired With Projects Made By Our Freelancers</h2>
+            <p>Top Jasa by Our Customers</p>
+          </div>
+        </div>   		
+    	</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    						
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Minimalist Logo</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price">Vinson Tandra</p>
+		    					</div>
+		    				
+	    					</div>
+	    				
+    					</div>
+    				</div>
+    			</div>
+					<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    						
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Minimalist Logo</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price">Vinson Tandra</p>
+		    					</div>
+		    				
+	    					</div>
+	    				
+    					</div>
+    				</div>
+    			</div>
+					<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    						
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Minimalist Logo</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price">Vinson Tandra</p>
+		    					</div>
+		    				
+	    					</div>
+	    				
+    					</div>
+    				</div>
+    			</div>
+					<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    						
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Minimalist Logo</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price">Vinson Tandra</p>
+		    					</div>
+		    				
+	    					</div>
+	    				
+    					</div>
+    				</div>
+    			</div>
+    				
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+ 
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/probanner.png);">
+    	<div class="container">
+    		<div class="row justify-content-center py-5">
+    			<div class="col-md-10">
+		    		<div class="row">
+		        
+						<button id="probutton"type="button" class="">Try Pro</button>
+		       
+		        
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Products</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>   		
+    	</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
+    						<span class="status">30%</span>
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.jpg" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-7.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-8.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+		    					<div class="rating">
+	    							<p class="text-right">
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+	    							</p>
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+            <h2 class="mb-4">Our satisfied customer says</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Marketing Manager</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="name">Garreth Smith</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-      		<div class="row">
-      			<div class="col-md-12">
-      				<div class="product-slider owl-carousel ftco-animate">
-      					<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/logo.jpg" alt="Colorlib Template">
-
-  		    					</a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Design Logo</h4>
-  		    						<h3><a href="#">I will Design minimalist logo for you</a></h3>
-
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  			    							<p class="price"><span class="mr-2 price-dc">Rp 500.000</span><span class="price-sale"> Start From Rp 300.000</span></p>
-  			    						</div>
-  			    						<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  		    						</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-  	    				<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="/images/coding.jpeg" alt="Colorlib Template"></a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Java Programming</h4>
-  		    						<h3><a href="#"> I will transform your idea into a professional java program</a></h3>
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  				    						<p class="price"><span>Start From Rp 2.000.000</span></p>
-  				    					</div>
-  				    					<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  			    					</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-  	    				<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/video.png" alt="Colorlib Template"></a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Video Editor</h4>
-                      <h3><a href="#"> I can edit your video</a></h3>
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  				    						<p class="price"><span>Start from Rp 1.000.000</span></p>
-  				    					</div>
-  				    					<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  			    					</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-  	    				<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img class="img-fluid" src="images/translate.jpg" alt="Colorlib Template"></a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Translate</h4>
-  		    						<h3><a href="#">I Will Translate English To Spanish 500 Words In 1 Day Highest Quality</a></h3>
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  				    						<p class="price"><span>Start from Rp 50.000</span></p>
-  				    					</div>
-  				    					<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  			    					</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-  	    				<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img src="images/b.png" alt="Colorlib Template">
-
-  			    				</a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Business</h4>
-  		    						<h3><a href="#">I Will Create Investor Ready Financial Plans And Projections</a></h3>
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  			    							<p class="price"><span class="mr-2 price-dc">Rp 2.000.000</span><span class="price-sale">Start from Rp 1.000.000</span></p>
-  			    						</div>
-  			    						<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  		    						</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-  	    				<div class="item">
-  		    				<div class="product">
-  		    					<a href="#" class="img-prod"><img src="images/web.jpg" alt="Colorlib Template"></a>
-  		    					<div class="text pt-3 px-3">
-                      <h4>Web Design</h4>
-  		    						<h3><a href="#">I Will Make Web And App Page Design</a></h3>
-  		    						<div class="d-flex">
-  		    							<div class="pricing">
-  				    						<p class="price"><span>Start from Rp 1.500.000</span></p>
-  				    					</div>
-  				    					<div class="rating">
-  			    							<p class="text-right">
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    								<span class="ion-ios-star-outline"></span>
-  			    							</p>
-  			    						</div>
-  			    					</div>
-  		    					</div>
-  		    				</div>
-  	    				</div>
-      				</div>
-      			</div>
-      		</div>
-      	</div>
-      </section>
-  <!-- SELESAI YANG POPULER -->
-  <section class="ftco-section ftco-product">
-    <div class="container">
-      <div class="row justify-content-center mb-3 pb-3">
-        <div class="col-md-12 heading-section text-center ftco-animate">
-          <h1 class="big">Explore</h1>
-          <h2 class="mb-4">Explore The Marketplace</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="product-slider owl-carousel ftco-animate">
-            <div class="item">
-              <div class="product">
-                <a href="{{route('kategori')}}" class="img-prod"><img class="img-fluid" src="images/b.png" alt="Colorlib Template">
+    </section>
+		<hr>
 
-                </a>
-                <div class="text pt-3 px-3">
-
-                  <div class="d-flex">
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="images/dm.png" alt="Colorlib Template"></a>
-                <div class="text pt-3 px-3">
-                  <div class="d-flex">
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="images/gd.png" alt="Colorlib Template"></a>
-                <div class="text pt-3 px-3">
-                  <div class="d-flex">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="product">
-                <a href="#" class="img-prod"><img class="img-fluid" src="images/pt.png" alt="Colorlib Template"></a>
-                <div class="text pt-3 px-3">
-                  <div class="d-flex">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="product">
-                <a href="#" class="img-prod"><img src="images/vs.png" alt="Colorlib Template">
-
-                </a>
-                <div class="text pt-3 px-3">
-                  <div class="d-flex">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="product">
-                <a href="#" class="img-prod"><img src="images/wt.png" alt="Colorlib Template"></a>
-                <div class="text pt-3 px-3">
-                  <div class="d-flex">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-      <section class="ftco-section testimony-section bg-light">
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
         <div class="container">
-  				<div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-            	<h1 class="big">Testimony</h1>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-md-8 ftco-animate">
-            	<div class="row ftco-animate">
-  		          <div class="col-md-12">
-  		            <div class="carousel-testimony owl-carousel ftco-owl">
-										@foreach($testimonis as $testimoni)
-										<div class="item">
-  		                <div class="testimony-wrap py-4 pb-5">
-  		                  <div class="user-img mb-4" style="background-image: url(/storage/{{$testimoni->image}})">
-  		                    <span class="quote d-flex align-items-center justify-content-center">
-  		                      <i class="icon-quote-left"></i>
-  		                    </span>
-  		                  </div>
-  		                  <div class="text text-center">
-  		                    <p class="mb-4">{{$testimoni->isi}}</p>
-  		                    <p class="name">{{$testimoni->name}}</p>
-  		                    <span class="position">Customer</span>
-  		                  </div>
-  		                </div>
-  		              </div>
-										@endforeach
-
-  		            </div>
-  		          </div>
-  		        </div>
+          <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2>Subcribe to our Newsletter</h2>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-
-      </section>
-
-
+      </div>
+    </section>
 
 
 
