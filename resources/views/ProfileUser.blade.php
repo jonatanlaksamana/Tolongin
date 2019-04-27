@@ -55,61 +55,25 @@ a {
    <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+
+      <th scope="col">nama client</th>
+      <th scope="col">Nama jasa</th>
+        <th scope="col">Harga</th>
     </tr>
   </thead>
   <tbody>
+  @foreach($order as $ord)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{$ord->name}}</th>
+      <td>{{$ord->jasaName}}</td>
+      <td>{{$ord->harga}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+      @endforeach
+
   </tbody>
 </table>
 
 </div>
-<div class="lebar">
-       <h1>Daftar Jasa</h1>
-       <div class="product-grid4">
-                <div class="product-image4">
-                    <a href="#">
-                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-1.jpg">
-                        <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo5/images/img-2.jpg">
-                    </a>
-                    <ul class="social">
-                        <li><a href="{{ route('productzoom') }}"data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
-                        <li><a href="{{ route('productzoom') }}"data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="{{ route('productzoom') }}"data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New</span>
-                    <span class="product-discount-label">-10%</span>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Women's Black Top</a></h3>
-                    <div class="price">
-                        $14.40
-                      
-                    </div>
-                    <a class="add-to-cart" href="">ADD TO CART</a>
-                </div>
-            </div>
-        </div>
 
 </div>
 
