@@ -144,7 +144,7 @@
     	<div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Products</h2>
+            <h2 class="mb-4">Jasa</h2>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
           </div>
         </div>   		
@@ -154,6 +154,7 @@
                 @foreach($jasas  as $jas)
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
+
     					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('storage/' . $jasa->image)}}" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
@@ -162,6 +163,7 @@
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="price-sale">Rp {{$jas->harga}}</span></p>
+
 		    					</div>
 {{--		    					<div class="rating">--}}
 {{--	    							<p class="text-right">--}}

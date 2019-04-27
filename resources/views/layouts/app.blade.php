@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
  #probutton{
@@ -62,12 +62,12 @@
  }
  .nabrak2{
 
-padding-top: 0px;
+padding-top: 30px;
 }
  h5 {
  
   font-size:30px;
-  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: Andale Mono, monospace;
   color:#282828;
   font-weight:bold;
  }
@@ -103,7 +103,7 @@ padding-top: 0px;
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="{{route('home')}}"><h5>Tolongin<h1></a>
+	      <a class="navbar-brand" href="{{route('home')}}"><h5>- Tolongin -<h1></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -113,7 +113,7 @@ padding-top: 0px;
 	          <li class="nav-item active "><a href="{{route('home')}}" class="nav-link h1"><h4>Home</h4></a></li>
             <li class="nav-item h1 fontlara" ><a href="{{ route('product') }}"class="nav-link h1 fontlara"><h4>Jasa<h4></a></li>
 
-            <li class="nav-item h1 fontlara" ><a href="{{ route('daftarjasa') }}"class="nav-link h1 fontlara"><h4>Daftarkan Jasa<h4></a></li>
+            <li class="nav-item h1 fontlara" ><a href="{{ route('daftarjasa') }}"class="nav-link h1 fontlara"><h4>Daftar Jasa<h4></a></li>
 	          <li class="nav-item h1 fontlara"><a href="{{ route('about') }}" class="nav-link h1 fontlara"><h4>About<h4></a></li>
             <li class="nav-item h1 fontlara"><a href="{{ route('cart') }}"class="nav-link h1 fontlara"><h4>Cart<h4></a></li>
 
@@ -123,8 +123,8 @@ padding-top: 0px;
      @auth
 
                @if($user->member == "admin")
-                   <li class="nav-item  h1 fontlara"><a href="{{URL::to('userprofile/' . $idUserLogin)}}" >Profile</a></li>
-                   <li class="nav-item h1 fontlara"><a href="{{route('admin.panel')}}" class="nav-link h1">Admin</a></li>
+                  
+                   <li class="nav-item h1 fontlara"><a href="{{route('admin.panel')}}" class="nav-link h1"><h4>Admin Page</h4></a></li>
                @endif
 
                 @endauth
@@ -142,7 +142,7 @@ padding-top: 0px;
                         @endif
                     @else
 
-            <li class="nav-item h1 fontlara" ><a href="{{URL::to('userprofile/' . $idUserLogin)}}"class="nav-link h1 fontlara">   <h4> Hi {{ Auth::user()->name }} !</h4></a></li>
+            <li class="nav-item h1 fontlara" ><a href="{{ route('profileuser') }}"class="nav-link h1 fontlara">   <h4> Hi {{ Auth::user()->name }}!</h4></a></li>
             <li class="nav-item h1 fontlara">    <a  href="{{ route('logout') }}" class="nav-link h1 fontlara"
                                    onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">

@@ -2,6 +2,7 @@
 
 @section('content')
 
+<div class="nabrak2"></div>
 
 
 <div class="hero-wrap hero-bread" style="background-image: url('images/details.png');">
