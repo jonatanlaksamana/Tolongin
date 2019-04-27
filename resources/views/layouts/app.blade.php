@@ -1,5 +1,4 @@
 
-
 <head>
   <title>Tolongin.com</title>
       <meta charset="utf-8">
@@ -21,7 +20,8 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-    
+    <link rel="stylesheet"  href="css/util2.css" />
+    <link rel="stylesheet" href="css/main2.css" />
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -70,18 +70,19 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
+	          <li class="nav-item active "><a href="{{route('home')}}" class="nav-link h1 fontlara">Home</a></li>
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="{{ route('product') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="{{ route('product') }}">Shop</a>
-                <a class="dropdown-item" href="{{ route('productzoom') }}">Single Product</a>
-                <a class="dropdown-item" href="{{ route('cart') }}">Cart</a>
-                <a class="dropdown-item" href="{{ route('checkout') }}">Checkout</a>
+              	<a class="dropdown-item h1 fontlara" href="{{ route('product') }}">Shop</a>
+                <a class="dropdown-item h1 fontlara" href="{{ route('productzoom') }}">Single Product</a>
+                <a class="dropdown-item h1 fontlara" href="{{ route('cart') }}">Cart</a>
+                <a class="dropdown-item h1 fontlara" href="{{ route('checkout') }}">Checkout</a>
               </div>
             </li>
-	          <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="{{ route('contact') }}"class="nav-link">Contact</a></li>
+            <li class="nav-item h1 fontlara" ><a href="{{ route('daftarjasa') }}"class="nav-link h1 fontlara">Daftarkan Jasa</a></li>
+	          <li class="nav-item h1 fontlara"><a href="{{ route('about') }}" class="nav-link h1 fontlara">About</a></li>
+	          <li class="nav-item h1 fontlara"><a href="{{ route('contact') }}"class="nav-link h1 fontlara">Contact</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
      <!-- Authentication Links -->
