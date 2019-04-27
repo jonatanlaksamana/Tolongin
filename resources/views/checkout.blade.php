@@ -15,96 +15,29 @@
         </div>
       </div>
 	</div>
+	<style>
+		.button3{
+
+background-color:pink;/* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 24px;
+margin-top:50px;
+margin-left:100px;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+		</style>
 	
     <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-8 ">
-						<form action="#" class="billing-form">
-							<h3 class="mb-4 billing-heading">Billing Details</h3>
-	          	<div class="row align-items-end">
-	          		<div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="firstname">Firt Name</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-	              </div>
-	              <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="lastname">Last Name</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-                </div>
-                <div class="w-100"></div>
-		            <div class="col-md-12">
-		            	<div class="form-group">
-		            		<label for="country">State / Country</label>
-		            		<div class="select-wrap">
-		                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                  <select name="" id="" class="form-control">
-		                  	<option value="">France</option>
-		                    <option value="">Italy</option>
-		                    <option value="">Philippines</option>
-		                    <option value="">South Korea</option>
-		                    <option value="">Hongkong</option>
-		                    <option value="">Japan</option>
-		                  </select>
-		                </div>
-		            	</div>
-								</div>
-								
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-	                	<label for="streetaddress">Street Address</label>
-	                  <input type="text" class="form-control" placeholder="House number and street name">
-	                </div>
-		            </div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
-	                </div>
-		            </div>
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-	                	<label for="towncity">Town / City</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-		            </div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-		            		<label for="postcodezip">Postcode / ZIP *</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-		            </div>
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="phone">Phone</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-	              </div>
-	              <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="emailaddress">Email Address</label>
-	                  <input type="text" class="form-control" placeholder="">
-	                </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-12">
-                	<div class="form-group mt-4">
-										<div class="radio">
-										  <label class="mr-3"><input type="radio" name="optradio"> Create an Account? </label>
-										  <label><input type="radio" name="optradio"> Ship to different address</label>
-										</div>
-									</div>
-                </div>
-	            </div>
-	          </form><!-- END -->
-
-
-
+					
 	          <div class="row mt-5 pt-3 d-flex">
 	          	<div class="col-md-6 d-flex">
 	          		<div class="cart-detail cart-total bg-light p-3 p-md-4">
@@ -129,16 +62,18 @@
 								</div>
 	          	</div>
 	          	<div class="col-md-6">
-	          		<div class="cart-detail bg-light p-3 p-md-4">
+								
+	          	
 									  
-    <form id="payment-form" method="post" action="snapfinish">
+								<form id="payment-form" method="post" action="snapfinish">
       <input type="hidden" name="_token" value="{!! csrf_token() !!}">
       <input type="hidden" name="result_type" id="result-type" value=""></div>
       <input type="hidden" name="result_data" id="result-data" value=""></div>
     </form>
     
-    <button id="pay-button">Pay!</button>
+    <button class="button3" id="pay-button">Pay!</button>
 </div>
+
       </div>
 	</section> <!-- .section -->
 
