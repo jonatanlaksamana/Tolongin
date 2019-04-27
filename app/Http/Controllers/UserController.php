@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\jasa;
 use Request;
 use App\User;
 use App\category;
@@ -109,7 +110,8 @@ class UserController extends Controller
   public function product(){
       $idUserLogin = Auth::id();
       $user = User::find($idUserLogin);
-    return view ('/product' , compact('idUserLogin' , 'user'));
+      $jasa = jasa::paginate(5);
+    return view ('/product' , compact('idUserLogin' , 'user' , 'jasa'));
   }
 
   public function ProfileUser(){
