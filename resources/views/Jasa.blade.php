@@ -11,6 +11,7 @@
                 </div>
                 <div class="card-body">
                     <form method="POST">
+                    @csrf
                         <div class="form-row">
                             <div class="name fontlara">Full name</div>
                             <div class="value">

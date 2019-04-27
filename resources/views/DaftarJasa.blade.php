@@ -14,8 +14,9 @@
 
 <div class="container-contact100">
       <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
 
+        <form class="contact100-form validate-form" action="{{route('addJasa')}}" method="post"enctype='multipart/form-data'>
+        @csrf
           <span class="contact100-form-title">
            Daftarkan jasa mu!
           </span>
@@ -40,8 +41,8 @@
             <input
               class="input100"
               type="text"
-              name="email"
-              placeholder="E-mail"
+              name="harga"
+              placeholder="Harga"
             />
             <span class="focus-input100"></span>
           </div>
@@ -50,11 +51,8 @@
             class="wrap-input100 validate-input"
             data-validate="Upload image"
           >
-          <form action="{{route('updateFoto')}}" method="post" enctype='multipart/form-data'>
-     
-            <input placeholder="Ganti Profile" type="file" name="gantifoto" accept="image/*">
-          
-      </form>
+          <input placeholder="Ganti Profile" type="file" name="gantifoto" accept="image/*">
+         
             <span class="focus-input100"></span>
           </div>
 
@@ -69,6 +67,7 @@
             ></textarea>
             <span class="focus-input100"></span>
           </div>
+
 
           <div class="container-contact100-form-btn">
             <button class="contact100-form-btn">
