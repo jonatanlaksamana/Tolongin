@@ -26,7 +26,9 @@ class AdminController extends Controller
             ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
             ->join('users', 'users.id', '=', 'jasas.user_id')
             ->get();
-        return view('Admin.AdminPanel', compact('User','joinTable','Chat','orders'));
+
+        $total = $orders->sum('harga');
+        return view('Admin.AdminPanel', compact('User','joinTable','Chat','orders' , 'total'));
     }
     public function chart(){
         return view('Admin/chart');
@@ -40,16 +42,14 @@ class AdminController extends Controller
     
       return view('Admin/table', compact('orders'));
     }
-    public function adminpanel(){
-
-      return view('Admin/AdminPanel');
+    public function users(){
+        $users = User::all();
+        return view('Admin.UserTable' , compact('users'));
     }
-    public function form(){
 
-      return view('Admin/form');
-    }
-    public function map(){
-return view ('Admin/map');
-
+    public function delete($id){
+        $target = order::find($id);
+        $target->delete();
+        return redirect()->back();
     }
 }

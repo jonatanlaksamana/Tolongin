@@ -56,23 +56,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{route('admin.chart')}}">
-                            <i class="fas fa-chart-bar"></i>Charts</a>
-                    </li>
-                    <li>
                         <a href="{{route('admin.table')}}">
-                            <i class="fas fa-table"></i>Table</a>
+                            <i class="fas fa-table"></i>Order Table</a>
                     </li>
-                    <li>
-                        <a href="{{route('admin.form')}}">
-                            <i class="far fa-check-square"></i>Forms</a>
-                    </li>
-
-                    <li>
-                        <a href="{{route('admin.map')}}">
-                            <i class="fas fa-map-marker-alt"></i>Maps </a>
-                    </li>
-                    <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Pages</a> </li>
+                    <li class="has-sub"><a class="js-arrow" href="{{route('admin.users')}}"><i class="fa fa-handshake-o"></i>User Table</a> </li>
                     <li class="has-sub"><a class="js-arrow" href="{{route('admin.testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
                     </li>
 
@@ -89,12 +76,6 @@
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <form class="form-header" action="" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search...." />
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
                         <div class="header-button">
                             <div class="noti-wrap">
                                 <div class="noti__item js-item-menu">
