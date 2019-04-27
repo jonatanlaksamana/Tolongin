@@ -49,4 +49,5 @@ Route::get('/productzoom','UserController@productzoom')->name('productzoom');
 Route::get('/cart','UserController@cart')->name('cart');
 Route::post('/addcart','cartcontroller@store')->name('add.cart');
 Route::post('/addTransaksi','Usercontroller@addTransaksi2')->name('addTransaksi');
+Route::post('/addJasa','JasaController@insertJasa')->name('addJasa');
 

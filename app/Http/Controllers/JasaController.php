@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\jasa;
-use Illuminate\Http\Request;
+use Request;
 use DB;
 use Auth;
+use File;
 
 class JasaController extends Controller
 {
@@ -86,6 +87,19 @@ class JasaController extends Controller
     }
 
     public function insertJasa(){
-
+        $jasa = new jasa();
+        $jasa->user_id = Auth::id();
+        $jasa->jasaName = request('name');
+        $jasa->harga = request('harga');
+        $jasa->category_id = 1;
+        $status = Request::hasFile('gantifoto');
+        $image = request('gantifoto');
+        $dest =  storage_path('/app/public');
+        File::delete($dest. "/" . $jasa->image ."");
+        $jasa->image =  time().".".$image->extension();
+        $image->move($dest,$jasa->image);
+        $jasa->deskripsi = request('message');
+        $jasa->save();
+        return redirect()->route('home');
     }
 }
