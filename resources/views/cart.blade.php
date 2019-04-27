@@ -100,7 +100,7 @@
     						<span>$17.60</span>
     					</p>
     				</div>
-    				<p class="text-center"><a href="{{ route('checkout') }}"class="btn">Proceed to Checkout</a></p>
+    				<p class="text-center"><a href="{{ route('checkout') }}"class="buttoncheckout">Proceed to Checkout</a></p>
     			</div>
     		</div>
 			</div>
