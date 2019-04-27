@@ -14,6 +14,7 @@
 
 <div class="container-contact100">
       <div class="wrap-contact100">
+
         <form class="contact100-form validate-form" action="{{route('addJasa')}}" method="post"enctype='multipart/form-data'>
         @csrf
           <span class="contact100-form-title">
@@ -27,7 +28,7 @@
             <input
               class="input100"
               type="text"
-              name="name"
+              name="vinson"
               placeholder="Masukan nama jasamu!"
             />
             <span class="focus-input100"></span>

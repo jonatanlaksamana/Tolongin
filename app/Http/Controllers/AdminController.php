@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Order;
 use DB;
-//alw
 use App\Request;
 use App\chat;
+use App\testimoni;
+
+
 
 class AdminController extends Controller
 {
@@ -42,9 +44,25 @@ class AdminController extends Controller
     
       return view('Admin/table', compact('orders'));
     }
+    public function testimoni(){
+        $testimoni = DB::table('testimonis')
+            ->join('users', function ($join) {
+                $join->on('users.id', '=', 'testimonis.idClient');
+            })->get();
+
+
+        return view('admin.testimoni' , compact('testimoni'));
+    }
     public function users(){
         $users = User::all();
         return view('Admin.UserTable' , compact('users'));
+    }
+    public function deletetestimoni($id){
+        $target = testimoni::find($id);
+        $target->delete();
+        return redirect()->route('admin.testimoni');
+
+
     }
 
     public function delete($id){
