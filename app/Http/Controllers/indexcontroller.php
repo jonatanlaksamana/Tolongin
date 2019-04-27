@@ -30,7 +30,7 @@ class indexcontroller extends Controller
 
     
 
-      $jasas = jasa::all();
+      $jasas = DB::table('jasas')->Orderby('id', 'desc')->limit(4)->get();
       return view('index' , compact('category' , 'idUserLogin', 'testimonis' , 'user','jasas'));
     }
     public function kategori(){
