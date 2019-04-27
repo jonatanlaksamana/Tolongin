@@ -15,6 +15,7 @@
 <div class="container-contact100">
       <div class="wrap-contact100">
         <form class="contact100-form validate-form">
+
           <span class="contact100-form-title">
            Daftarkan jasa mu!
           </span>
@@ -26,7 +27,7 @@
             <input
               class="input100"
               type="text"
-              name="name"
+              name="vinson"
               placeholder="Masukan nama jasamu!"
             />
             <span class="focus-input100"></span>
