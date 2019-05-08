@@ -46,6 +46,7 @@
                             <div class="col-lg-12">
                                 <h2 class="title-1 m-b-25">Jasa yang Sudah di Aprove</h2>
                                 <div class="table-responsive table--no-card m-b-40">
+
                                     <table class="table table-borderless table-striped table-earning">
                                         <thead>
                                         <tr>
@@ -74,6 +75,7 @@
                                         @endforeach
                                         </tbody>
                                     </table>
+                                    <p class="lead"> Total Purchasing :{{$total[0]->total}}</p>
                                 </div>
                             </div>
                         </div>

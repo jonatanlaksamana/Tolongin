@@ -39,7 +39,7 @@ Route::post('/vt_transaction', 'PagesController@transaction_process');
 Route::post('/vt_notif', 'PagesController@notification');
 Route::get('/snap', 'SnapController@snap');
 Route::get('/snaptoken', 'SnapController@token');
-Route::post('/snapfinish', 'SnapController@finish');
+Route::post('/snapfinish', 'SnapController@finish')->route('finish.order');
 Route::get('/checkout','UserController@checkout')->name('checkout');
 Route::get('/ProPage','UserController@propage')->name('propage');
 Route::get('/ProfileUser','UserController@profileuser')->name('profileuser');

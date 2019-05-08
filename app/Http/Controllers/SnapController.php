@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Veritrans\Midtrans;
+use Illuminate\Support\Facades\Auth;
+
 class SnapController extends Controller
 {
     public function __construct()
@@ -22,7 +24,7 @@ class SnapController extends Controller
         $midtrans = new Midtrans;
         $transaction_details = array(
             'order_id'      => uniqid(),
-            'gross_amount'  => \Cart::getTotal()
+            'gross_amount'  => \Cart::getTotal() + 10000
         );
         // Populate items
         $items = [
@@ -50,12 +52,9 @@ class SnapController extends Controller
             );
         // Populate customer's Info
         $customer_details = array(
-            'first_name'      => "Andri",
-            'last_name'       => "Setiawan",
-            'email'           => "andrisetiawan@asdasd.com",
-            'phone'           => "081322311801",
-            'billing_address' => $billing_address,
-            'shipping_address'=> $shipping_address
+            'first_name'      => Auth::user()->name,
+            'email'           => Auth::user()->email,
+            'phone'           => Auth::user()->phone_number,
             );
         // Data yang akan dikirim untuk request redirect_url.
         $credit_card['secure'] = true;
@@ -91,10 +90,9 @@ class SnapController extends Controller
     {
         $result = $request->input('result_data');
         $result = json_decode($result);
-        echo $result->status_message . '<br>';
-        echo 'RESULT <br><pre>';
-        var_dump($result);
-        echo '</pre>' ;
+        return redirect()->route('home')->with([ 'success'=> $result->status_message ]);
+
+
     }
     public function notification()
     {

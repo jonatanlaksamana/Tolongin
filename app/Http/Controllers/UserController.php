@@ -104,9 +104,10 @@ class UserController extends Controller
   
   public function checkout(){
 
+        $cartTotal = \Cart::getSubTotal();
       $idUserLogin = Auth::id();
       $user = User::find($idUserLogin);
-    return view('/checkout' , compact('idUserLogin','user'));
+    return view('/checkout' , compact('idUserLogin','user' , 'cartTotal'));
   }
 
   public function aboutus(){

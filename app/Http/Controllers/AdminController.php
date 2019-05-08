@@ -49,9 +49,9 @@ class AdminController extends Controller
 
         $orders = DB::select("   SELECT orders.id , jasaName,users.name,harga from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 0");
         $ordersAcc = DB::select("   SELECT orders.id , jasaName,users.name,harga from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 1");
-//        $total = DB::select("   SELECT sum(harga)from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 1");
+        $total = DB::select("   SELECT sum(harga) as total from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 1");
     
-      return view('Admin/table', compact('orders' , 'ordersAcc'));
+      return view('Admin/table', compact('orders' , 'ordersAcc' , 'total'));
     }
     public function testimoni(){
         $testimoni = DB::table('testimonis')

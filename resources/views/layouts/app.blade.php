@@ -159,7 +159,7 @@ padding-top: 30px;
 	    </div>
 	  </nav>
    
- 
+            @include('flash')
             @yield('content')
   
             <footer class="ftco-footer bg-light ftco-section">

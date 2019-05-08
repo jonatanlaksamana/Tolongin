@@ -61,6 +61,7 @@
                     </li>
                     <li class="has-sub"><a class="js-arrow" href="{{route('admin.users')}}"><i class="fa fa-handshake-o"></i>User Table</a> </li>
                     <li class="has-sub"><a class="js-arrow" href="{{route('admin.testimoni')}}"><i class="fa fa-quote-right"></i>Testimoni</a> </li>
+                    <li class="has-sub"><a class="js-arrow" href="{{route('home')}}"><i class="fa fa-home"></i>Back To Home</a> </li>
                     </li>
 
                 </ul>
