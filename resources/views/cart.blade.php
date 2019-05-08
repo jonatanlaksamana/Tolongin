@@ -31,6 +31,7 @@
 						      </tr>
 						    </thead>
 						    <tbody>
+
                            @foreach($cart as $car)
 						      <tr class="text-center">
 

@@ -160,25 +160,26 @@
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
 
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('storage/' . $jasa->image)}}" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{{asset('storage/' . $jas->image)}}" alt="Colorlib Template">
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">Floral {{$jas->jasaName}}</a></h3>
+    						<h3><a href="#"> {{$jas->jasaName}}</a></h3>
+							<div class="row">
+								<div class="col-6">
+									<p>{{$jas->name}}</p>
+								</div>
+								<div class="col-6">
+									member
+								</div>
+							</div>
+
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="price-sale">Rp {{$jas->harga}}</span></p>
 
 		    					</div>
-{{--		    					<div class="rating">--}}
-{{--	    							<p class="text-right">--}}
-{{--	    								<a href="#"><span class="ion-ios-star-outline"></span></a>--}}
-{{--	    								<a href="#"><span class="ion-ios-star-outline"></span></a>--}}
-{{--	    								<a href="#"><span class="ion-ios-star-outline"></span></a>--}}
-{{--	    								<a href="#"><span class="ion-ios-star-outline"></span></a>--}}
-{{--	    								<a href="#"><span class="ion-ios-star-outline"></span></a>--}}
-{{--	    							</p>--}}
-{{--	    						</div>--}}
+
 	    					</div>
     						<p class="bottom-area d-flex px-3">
                             <form action="{{url('/addcart/' . $jas->id)}}" method="post">
@@ -204,17 +205,6 @@
           </div>
 
         </div>
-{{--          <div class="row">--}}
-{{--              <div class="col-lg-4 col-md-4">--}}
-{{--                  a--}}
-{{--              </div>--}}
-{{--              <div class="col-lg-4 col-md-4">--}}
-{{--                  a--}}
-{{--              </div>--}}
-{{--              <div class="col-lg-4 col-md-4">--}}
-{{--                  a--}}
-{{--              </div>--}}
-{{--          </div>--}}
 
       </div>
     </section>

@@ -30,7 +30,13 @@
                                                     <td>{{$user->name}}</td>
                                                     <th>{{$user->email}}</th>
                                                     <td>{{$user->member}}</td>
-                                                    <td><button class="btn btn-success bnt-sm">Change Privilage</button></td>
+                                                    <td>
+                                                        <form action="{{url('/delete/user/' . $user->id)}}" method="post">
+                                                            @csrf
+                                                            <button class="btn btn-outline-danger bnt-sm">Delete</button>
+                                                        </form>
+
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                           </tbody>

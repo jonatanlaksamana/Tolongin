@@ -28,10 +28,10 @@ class indexcontroller extends Controller
       ->join('users', function ($join) {
           $join->on('users.id', '=', 'testimonis.idClient');
       })->get();
-
-    
-
-      $jasas = jasa::all();
+      $jasas = DB::table('jasas')
+          ->join('users', 'users.id', '=', 'jasas.user_id')
+          ->select('jasas.*', 'users.name')
+          ->get();
       return view('index' , compact('category' , 'idUserLogin', 'testimonis' , 'user','jasas'));
     }
     public function kategori(){

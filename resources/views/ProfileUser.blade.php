@@ -38,10 +38,9 @@ a {
     </div>
    <div class="nabrak"></div>
    <div class="card">
-  <img src="images/person_1.jpg" alt="John" style="width:100%">
-  <h1>John Doe</h1>
-  <p class="title">CEO & Founder, Example</p>
-  <p>Harvard University</p>
+  <img src="{{asset('storage/wtf.jpg')}}" style="width:100%">
+  <h1>{{$user->name}}</h1>
+  <p class="title">{{$user->member}}</p>
   <div style="margin: 24px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  
@@ -64,6 +63,7 @@ a {
       <th scope="col">Nama Jasa</th>
       <th scope="col">Harga</th>
         <th>Status</th>
+        <th>update</th>
 
     </tr>
   </thead>
@@ -71,13 +71,32 @@ a {
   @foreach($order as $ord)
     <tr>
 
-      <th scope="row">{{$ord->name}}</th>
+      <td>{{$ord->name}}</td>
       <td>{{$ord->jasaName}}</td>
       <td>{{$ord->harga}}</td>
-        <td>On Progress</td>
+        <td>
+            @if($ord->status == 0)
+                on Progress
+                 @else
+
+                 Done
+            @endif
+        </td>
+        <td>
+            <form action="{{url('/update/ordered/' . $ord->orderId)}}" method="post">
+                @csrf
+                @if($ord->status == 0)
+                <button class="btn btn-success btn-sm"> Update</button>
+                    @else
+                    <button class=" disabled btn btn-success btn-sm"> Update</button>
+                    @endif
+            </form>
+
+        </td>
 
     </tr>
       @endforeach
+
 
   </tbody>
 </table>

@@ -29,6 +29,7 @@ Route::post('/updatetestimoni' , 'UserController@updatetestimoni')->name('update
 Route::get('/admin/testimoni' , 'AdminController@testimoni')->name('admin.testimoni');
 Route::get('/jasa','UserController@jasa')->name('jasa');
 Route::post('/delete/order/{id}' , 'AdminController@delete')->name('delete.order');
+Route::post('/delete/user/{id}' , 'AdminController@deleteUser')->name('delete.user');
 Route::get('/admin/users','AdminController@users')->name('admin.users');
 Route::get('/vtweb', 'PagesController@vtweb');
 Route::get('/vtdirect', 'PagesController@vtdirect');
@@ -54,3 +55,4 @@ Route::post('/vt_notif', 'VtwebController@notification');
 Route::post('/addJasa','JasaController@insertJasa')->name('addJasa');
 Route::post('/admin/delete/testimoni/{id}' , 'AdminController@deletetestimoni')->name('delete.testimoni');
 Route::post('/addcart/{id}' , 'cartcontroller@add')->name('add.cart');
+Route::post('/update/ordered/{id}' , 'UserController@updateorder')->name('update.order');

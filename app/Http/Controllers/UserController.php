@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\jasa;
 use App\order;
+use function PhpParser\filesInDir;
 use Request;
 use App\User;
 use App\category;
@@ -17,7 +18,15 @@ use File;
 class UserController extends Controller
 {
     //
-   
+
+
+    public function updateorder($id){
+        $order = order::find($id);
+        $order->status = 1;
+        $order->save();
+        return redirect()->route('profileuser');
+
+    }
     public function profile(){
 
       $category=category::all();
@@ -123,7 +132,8 @@ class UserController extends Controller
     $order =  DB::table('orders')
         ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
         ->join('users', 'users.id', '=', 'orders.idClient')
-        ->where('idClient', $idUserLogin)
+        ->where('user_id', $idUserLogin)
+        ->select('orders.id as orderId', 'orders.status', 'jasas.*', 'users.*')
         ->get();
 
     $jasa = jasa::where('user_id', $idUserLogin)->get();
@@ -153,6 +163,8 @@ class UserController extends Controller
     $user = User::find($idUserLogin);
     $cart = \Cart::getContent();
     $total = \Cart::getTotal();
+    
+    $category=category::all();
 
     return view('cart',compact('cartCollection','subTotal','cartTotalQuantity' , 'user' , 'category' , 'idUserLogin' , 'cart' , 'total' ));
         }

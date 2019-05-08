@@ -80,6 +80,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
                                         @foreach($orders as $order)
                                             <tr>
                                                 <td>{{$order->created_at}}</td>

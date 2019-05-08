@@ -36,13 +36,22 @@ class AdminController extends Controller
         return view('Admin/chart');
 
     }
+
+    public function deleteUser($id){
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        $user = User::find($id);
+        $user->delete();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        return redirect()->back();
+    }
     public function tables(){
-        $orders = DB::table('orders')
-        ->join('jasas', 'jasas.id', '=', 'orders.idJasa')
-        ->join('users', 'users.id', '=', 'jasas.user_id')
-        ->get();
+
+
+        $orders = DB::select("   SELECT orders.id , jasaName,users.name,harga from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 0");
+        $ordersAcc = DB::select("   SELECT orders.id , jasaName,users.name,harga from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 1");
+//        $total = DB::select("   SELECT sum(harga)from orders  join jasas on  orders.idJasa = jasas.id join users on users.id = jasas.user_id where orders.status = 1");
     
-      return view('Admin/table', compact('orders'));
+      return view('Admin/table', compact('orders' , 'ordersAcc'));
     }
     public function testimoni(){
         $testimoni = DB::table('testimonis')
